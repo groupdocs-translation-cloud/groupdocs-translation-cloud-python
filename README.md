@@ -13,11 +13,20 @@ It is easy to get started with GroupDocs.Translation Cloud, and there is nothing
 ## Features:
 
 - Translation of Microsoft Word and Microsoft Excel documents
-- 10 languages and 18 languages pairs support
+- [10 languages and 18 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes / endnotes, image captions in Word documents
 - Translation of cells, charts, tables, pivot tables in Excel documents
 - Translation of plain text
 - API that allows you manage your files and folders in our Cloud
+
+## Versions support:
+- Python :: 2.7
+- Python :: 3
+- Python :: 3.4
+- Python :: 3.5
+- Python :: 3.6
+- Python :: 3.7
+- Python :: 3.8
 
 ## How to use the SDK?
 
