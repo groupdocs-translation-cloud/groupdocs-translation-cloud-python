@@ -7,8 +7,8 @@ In detail, it's a set of SDKs for document and plain text translation in our Clo
 It is easy to get started with GroupDocs.Translation Cloud, and there is nothing to install. Create an account at [GroupDocs Cloud](https://dashboard.aspose.cloud/#/) and get your application information, then you are ready to use [SDKs](https://github.com/groupdocs-translation-cloud)
 
 ## Release 20.8:
-- GroupDocs.Translation Python SDK
-- GroupDocs.Translation Java SDK
+- GroupDocs.Translation Cloud Python SDK
+
 
 ## Features:
 
