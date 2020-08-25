@@ -1,6 +1,8 @@
 # GroupDocs Translation Cloud 
 
-[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation) is a simple SDK used to add translation of Microsoft Word documents, Microsoft Excel workbooks and plain text to your app with merely a few lines of code.
+[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation) is Cloud API to translate Word and Excel files as well as plain text. 
+
+For convenience of our Python customers we introduce a simple SDK used to add translation of Microsoft Word documents, Microsoft Excel workbooks and plain text to your app with merely a few lines of code.
 
 In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translaton of .doc, .docx, .docm, .xls, .xlsx, .xlsm files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in our Cloud or will return translated text.
 
@@ -18,15 +20,6 @@ It is easy to get started with GroupDocs.Translation Cloud, and there is nothing
 - Translation of cells, charts, tables, pivot tables in Excel documents
 - Translation of plain text
 - API that allows you manage your files and folders in our Cloud
-
-## Versions support:
-- Python :: 2.7
-- Python :: 3
-- Python :: 3.4
-- Python :: 3.5
-- Python :: 3.6
-- Python :: 3.7
-- Python :: 3.8
 
 ## How to use the SDK?
 
@@ -73,13 +66,27 @@ Make your solution using [SDK](https://github.com/groupdocs-translation-cloud), 
 
 #### 1. Get API keys if you haven't
 
-Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://wiki.groupdocs.cloud/translationcloud/getting-started/create-new-app-and-get-app-key-and-sid/).
+Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/translation/create-new-app-and-get-app-key-and-sid).
 
-#### 2. Run Demo
+#### 2. Install SDK
 
-  * Checkout the SDK or get from PiPy (pip install groupdocs-translation-cloud)
+Install `groupdocs-translation-cloud` with [PIP](https://pypi.org/project/pip/) from [PyPI](https://pypi.org/) by:
+
+```sh
+pip install groupdocs-translation-cloud
+```
+
+Or clone repository and install it via [Setuptools](http://pypi.python.org/pypi/setuptools): 
+
+```sh
+python setup.py install
+```
+
+#### 3. Run Demo
+
+  * Checkout the SDK or get from PiPy 
   * Set Your AppSid & AppKey
-  * Run Jupyter Notebook demo.ipynb
+  * Run Jupyter Notebook [demo.ipynb](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/demo.ipynb)
  
 --------------------------- 
 
@@ -94,6 +101,15 @@ This project includes:
 ### Dependencies
 - See requirements.txt
 
+## Versions support:
+- Python :: 2.7
+- Python :: 3
+- Python :: 3.4
+- Python :: 3.5
+- Python :: 3.6
+- Python :: 3.7
+- Python :: 3.8
+
 _________________________
 
 ## GroupDocs.Translation Cloud SDKs
@@ -106,7 +122,8 @@ _________________________
 
 - **Website:** [https://www.groupdocs.cloud](https://www.groupdocs.cloud)
 - **Product Home:** [GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation)
-- **Documentation:** [GroupDocs.Translation Cloud Documentation](https://wiki.groupdocs.cloud/translationcloud/)
+- **Documentation:** [GroupDocs.Translation Cloud Documentation](https://docs.groupdocs.cloud/translation/)
+- **API Reference:** [GroupDocs.Translation Cloud API Reference](https://apireference.groupdocs.cloud/translation/) 
 - **Forum:** [GroupDocs.Translation Cloud Forum](https://forum.groupdocs.cloud/c/translation)
 - **Blog:** [GroupDocs.Translation Cloud Blog](https://blog.groupdocs.cloud/category/translation/)
 - **Pricing:** [GroupDocs Cloud Pricing](https://purchase.groupdocs.cloud/pricing)
