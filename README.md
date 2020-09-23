@@ -121,12 +121,4 @@ _________________________
 |--------------|----------|-------|-------|-------|---------|---------|----------|-------|
 |[.NET](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet)|[Java](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java)|PHP|Ruby|[Python](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python)|Node.js|Android|Objective-C|Perl|
 
-## Resources
-
-- **Website:** [https://www.groupdocs.cloud](https://www.groupdocs.cloud)
-- **Product Home:** [GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation)
-- **Documentation:** [GroupDocs.Translation Cloud Documentation](https://docs.groupdocs.cloud/translation/)
-- **API Reference:** [GroupDocs.Translation Cloud API Reference](https://apireference.groupdocs.cloud/translation/) 
-- **Forum:** [GroupDocs.Translation Cloud Forum](https://forum.groupdocs.cloud/c/translation)
-- **Blog:** [GroupDocs.Translation Cloud Blog](https://blog.groupdocs.cloud/category/translation/)
-- **Pricing:** [GroupDocs Cloud Pricing](https://purchase.groupdocs.cloud/pricing)
+[Home](https://www.groupdocs.cloud/) | [Product Page](https://products.groupdocs.cloud/translation/python) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/viewer/family) | [API Reference](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
