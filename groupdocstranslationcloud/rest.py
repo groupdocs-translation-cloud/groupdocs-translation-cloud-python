@@ -43,11 +43,11 @@ from six.moves.urllib.parse import urlencode
 try:
     import urllib3
 except ImportError:
-    raise ImportError('Python client requires urllib3.')
+    raise ImportError('Swagger python client requires urllib3.')
 
+# from groupdocstranslation.api_client import ApiException
 
 logger = logging.getLogger(__name__)
-
 
 class RESTResponse(io.IOBase):
 
@@ -69,11 +69,11 @@ class RESTResponse(io.IOBase):
 class RESTClientObject(object):
 
     def __init__(self, configuration, pools_size=4, maxsize=None):
-        # urllib3.PoolManager will pass all kw parameters to connection_pool
-        # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75
-        # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/connectionpool.py#L680
-        # maxsize is the number of requests to host that are allowed in parallel
-        # Custom SSL certificates and client certificates: http://urllib3.readthedocs.io/en/latest/advanced-usage.ocr
+        # urllib3.PoolManager will pass all kw parameters to connectionpool
+        # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/poolmanager.py#L75  # noqa: E501
+        # https://github.com/shazow/urllib3/blob/f9409436f83aeb79fbaf090181cd81b784f1b8ce/urllib3/connectionpool.py#L680  # noqa: E501
+        # maxsize is the number of requests to host that are allowed in parallel  # noqa: E501
+        # Custom SSL certificates and client certificates: http://urllib3.readthedocs.io/en/latest/advanced-usage.html  # noqa: E501
 
         # cert_reqs
         if configuration.verify_ssl:
@@ -90,7 +90,7 @@ class RESTClientObject(object):
 
         addition_pool_args = {}
         if configuration.assert_hostname is not None:
-            addition_pool_args['assert_hostname'] = configuration.assert_hostname
+            addition_pool_args['assert_hostname'] = configuration.assert_hostname  # noqa: E501
 
         if maxsize is None:
             if configuration.connection_pool_maxsize is not None:
@@ -125,7 +125,6 @@ class RESTClientObject(object):
                 body=None, post_params=None, _preload_content=True,
                 _request_timeout=None):
         """Perform requests.
-
         :param method: http request method
         :param url: http request url
         :param query_params: query parameters in the url
@@ -156,7 +155,7 @@ class RESTClientObject(object):
 
         timeout = None
         if _request_timeout:
-            if isinstance(_request_timeout, (int, ) if six.PY3 else (int, int)):
+            if isinstance(_request_timeout, (int, ) if six.PY3 else (int, long)):  #pylint: disable=undefined-variable
                 timeout = urllib3.Timeout(total=_request_timeout)
             elif (isinstance(_request_timeout, tuple) and
                   len(_request_timeout) == 2):
@@ -171,8 +170,10 @@ class RESTClientObject(object):
             if method in ['POST', 'PUT', 'PATCH', 'OPTIONS', 'DELETE']:
                 if query_params:
                     url += '?' + urlencode(query_params)
+                if not six.PY3:
+                    url = url.encode('utf8')
                 if re.search('json', headers['Content-Type'], re.IGNORECASE):
-                    request_body = None
+                    request_body = ''
                     if body is not None:
                         request_body = json.dumps(body)
                     r = self.pool_manager.request(
@@ -181,7 +182,7 @@ class RESTClientObject(object):
                         preload_content=_preload_content,
                         timeout=timeout,
                         headers=headers)
-                elif headers['Content-Type'] == 'application/x-www-form-urlencoded':
+                elif headers['Content-Type'] == 'application/x-www-form-urlencoded':  # noqa: E501
                     r = self.pool_manager.request(
                         method, url,
                         fields=post_params,
@@ -231,11 +232,6 @@ class RESTClientObject(object):
 
         if _preload_content:
             r = RESTResponse(r)
-
-            # In the python 3, the response.data is bytes.
-            # we need to decode it to string.
-            if six.PY3:
-                r.data = r.data.decode('utf8')
 
             # log response body
             logger.debug("response body: %s", r.data)
@@ -309,7 +305,6 @@ class RESTClientObject(object):
                             _preload_content=_preload_content,
                             _request_timeout=_request_timeout,
                             body=body)
-
 
 class ApiException(Exception):
 

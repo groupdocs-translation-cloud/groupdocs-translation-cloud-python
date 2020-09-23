@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 from os import path
 
 NAME = "groupdocs-translation-cloud"
-VERSION = "20.8.0"
+VERSION = "20.8.1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -27,14 +27,14 @@ setup(
     long_description_content_type='text/markdown',
     author='Aspose',
     author_email='anton.perhunov@aspose.com',
-    url="https://products.groupdocs.cloud/translation/",
+    url="https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python",
     license='MIT',
     classifiers=[  # Optional
         # How mature is this project? Common values are
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',

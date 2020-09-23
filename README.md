@@ -8,6 +8,9 @@ In detail, it's a set of SDKs for document and plain text translation in our Clo
 
 It is easy to get started with GroupDocs.Translation Cloud, and there is nothing to install. Create an account at [GroupDocs Cloud](https://dashboard.aspose.cloud/#/) and get your application information, then you are ready to use [SDKs](https://github.com/groupdocs-translation-cloud)
 
+## Release 20.9
+- French-German language pair support
+
 ## Release 20.8:
 - GroupDocs.Translation Cloud Python SDK
 
@@ -15,7 +18,7 @@ It is easy to get started with GroupDocs.Translation Cloud, and there is nothing
 ## Features:
 
 - Translation of Microsoft Word and Microsoft Excel documents
-- [10 languages and 18 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [10 languages and 20 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes / endnotes, image captions in Word documents
 - Translation of cells, charts, tables, pivot tables in Excel documents
 - Translation of plain text
