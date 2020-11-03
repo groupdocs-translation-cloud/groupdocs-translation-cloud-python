@@ -46,7 +46,9 @@ class TranslateDocument:
         'Name': 'str',
         'Folder': 'str',
         'Savepath': 'str',
-        'Savefile': 'str'
+        'Savefile': 'str',
+        'Masters':  'bool',
+        'Elements': 'list'
     }
 
     attribute_map = {
@@ -56,10 +58,12 @@ class TranslateDocument:
         'Name': 'name',
         'Folder': 'folder',
         'Savepath': 'savepath',
-        'saveffile': 'savefile'
+        'Savefile': 'savefile',
+        'Masters': 'masters',
+        'Elements': 'elements'
     }
 
-    def __init__(self, pair, _format, storage, name, folder, savepath, savefile):
+    def __init__(self, pair, _format, storage, name, folder, savepath, savefile, masters, elements):
         """
         :param str Pair: language pair
         :param str Format: document format, put file extension here
@@ -68,6 +72,8 @@ class TranslateDocument:
         :param str Folder: folder(s) where file is saved
         :param str Savepath: folder(s) where to save translated file
         :param str Savefile: translated file name
+        :param bool Masters: if master slides in presentation should be translated
+        :param list Elements: to translate only selected slides 
         """
         self.Pair = pair            
         self.Format = _format
@@ -76,8 +82,11 @@ class TranslateDocument:
         self.Folder = folder
         self.Savepath = savepath
         self.Savefile = savefile
+        self.Masters = masters
+        self.Elements = elements
 
     def to_string(self):
         request = [{"pair": self.Pair, "format": self.Format, "storage": self.Storage, "name": self.Name,
-                    "folder": self.Folder, "savepath": self.Savepath, "savefile": self.Savefile}]
+                    "folder": self.Folder, "savepath": self.Savepath, "savefile": self.Savefile, 
+                    "masters": self.Masters, "elements": self.Elements}]
         return  json.dumps(request)         
