@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 from os import path
 
 NAME = "groupdocs-translation-cloud"
-VERSION = "20.8.1"
+VERSION = "20.10.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -62,7 +62,7 @@ setup(
     # This package contains GroupDocs.Translation Cloud SDK for Python.
     # This SDK allows you to work with GroupDocs.Translation Cloud REST APIs in your Python applications, and integrate Translation functionality in few steps.
     #
-    # In detail, it's a set of SDKs for plain text and document translation in our Cloud. It supports translation of Word and Excel documents. Just pass text or parameteres of document uploaded to our Cloud Storage, to the GroupDocs.Translation Cloud API, and it will return translated text or will save translated file in Cloud Storage usinng specified path and name.
+    # In detail, it's a set of SDKs for plain text and document translation in our Cloud. It supports translation of Word, Excel and PowerPoint documents. Just pass text or parameteres of document uploaded to our Cloud Storage, to the GroupDocs.Translation Cloud API, and it will return translated text or will save translated file in Cloud Storage usinng specified path and name.
     #
     # It is easy to get started with GroupDocs.Translation Cloud, and there is nothing to install locally or configure servers. Create an account at GrroupDocs Cloud and get your application KEY, import this python, module, initialize "Configuration. class with this keys, and then you are ready to use the API.
     # """
