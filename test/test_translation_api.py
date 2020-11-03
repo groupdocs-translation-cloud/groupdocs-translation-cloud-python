@@ -47,7 +47,7 @@ class TestTranslationApi(unittest.TestCase):
         cls.storageApi = TestHelper.storage
 
     ###############################################################
-    #                          Trannslation tests
+    #                          Translation tests
     ###############################################################
 
     def test_text_translation(self):
@@ -71,8 +71,10 @@ class TestTranslationApi(unittest.TestCase):
         folder = ""
         savepath = ""
         savefile = "translated_test_python.docx"
+        masters = False
+        elements = list()
         try:
-            translator = translate_document.TranslateDocument(pair, _format, storage, name, folder, savepath, savefile)
+            translator = translate_document.TranslateDocument(pair, _format, storage, name, folder, savepath, savefile, masters, elements)
             request = translator.to_string()
             response = self.api.post_translate_document(request)
             self.assertEqual(response.status, "ok")
