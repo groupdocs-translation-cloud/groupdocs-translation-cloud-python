@@ -66,6 +66,7 @@ class TestTranslationApi(unittest.TestCase):
     def test_document_translation(self):
         pair = "en-fr"
         _format = "docx"
+        outformat = "docx"
         storage = "First Storage"
         name = "test.docx"
         folder = ""
