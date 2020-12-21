@@ -60,13 +60,13 @@ class TypeWithDefault(type):
 
 class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
-    def __init__(self, apiKey=None, appSid=None, basePath="https://api.groupdocs.cloud/v1.0/translation",
+    def __init__(self, client_secret=None, client_id=None, basePath="https://api.groupdocs.cloud/v1.0/translation",
                  authPath="https://api.groupdocs.cloud/connect/token", debug=False):
 
         """Constructor"""
         # Authentication Settings
-        self.api_key = apiKey
-        self.app_sid = appSid
+        self.client_secret = client_secret
+        self.client_id = client_id
 
         # Default Base url
         self.host = basePath
@@ -82,7 +82,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         self.temp_folder_path = gettempdir()
 
         # dict to store API prefix (e.g. Bearer)
-        self.api_key_prefix = {}
+        self.client_secret_prefix = {}
 
         # access token for OAuth2
         self.access_token = 'Bearer ' + self.get_token()
@@ -131,7 +131,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         # call from __init__ - CERT not ready
         http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())
         headers = {"ContentType": "application/x-www-form-urlencoded", "Accept": "application/json;charset=UTF-8"}
-        fields = {'client_id': self.app_sid, 'client_secret': self.api_key, 'grant_type': 'client_credentials'}
+        fields = {'client_id': self.client_id, 'client_secret': self.client_secret, 'grant_type': 'client_credentials'}
         r = http.request('POST', self.auth_host, headers=headers, fields=fields)
         return json.loads(r.data)['access_token']
 
@@ -237,11 +237,11 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :param identifier: The identifier of apiKey.
         :return: The token for api key authentication.
         """
-        if (self.api_key.get(identifier) and
-                self.api_key_prefix.get(identifier)):
-            return self.api_key_prefix[identifier] + ' ' + self.api_key[identifier]
-        elif self.api_key.get(identifier):
-            return self.api_key[identifier]
+        if (self.client_secret.get(identifier) and
+                self.client_secret_prefix.get(identifier)):
+            return self.client_secret_prefix[identifier] + ' ' + self.client_secret[identifier]
+        elif self.client_secret.get(identifier):
+            return self.client_secret[identifier]
 
     def get_basic_auth_token(self):
         """Gets HTTP basic authentication header (string).
