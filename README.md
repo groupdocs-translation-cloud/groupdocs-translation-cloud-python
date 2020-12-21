@@ -8,6 +8,9 @@ In detail, it's a set of SDKs for document and plain text translation in our Clo
 
 It is easy to get started with GroupDocs.Translation Cloud, and there is nothing to install. Create an account at [GroupDocs Cloud](https://dashboard.groupdocs.cloud/#/) and get your application information, then you are ready to use [SDKs](https://github.com/groupdocs-translation-cloud)
 
+## Release 20.12
+- Conversion of translated files to other formats is added
+
 ## Release 20.10
 - Microsoft PowerPoint presentations translation
 - French-Italian language pair support
@@ -27,6 +30,7 @@ It is easy to get started with GroupDocs.Translation Cloud, and there is nothing
 - Translation of cells, charts, tables, pivot tables in Excel documents
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations
 - Translation of plain text
+- Conversion of translated files to other formats like pdf, tiff, xps, etc.
 - API that allows you manage your files and folders in our Cloud
 
 ## How to use the SDK?
@@ -56,6 +60,7 @@ print(res_text.translation)
 #document translation
 pair = "en-fr"
 _format = "docx"
+ourformat = "docx"
 storage = "First Storage"
 name = "test.docx"
 folder = ""
@@ -63,7 +68,7 @@ savepath = ""
 savefile = "test_python.docx"  
 masters = False
 elements = []
-translator = TranslateDocument(pair, _format, storage, name, folder, savepath, savefile, masters, elements)
+translator = TranslateDocument(pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements)
 request = translator.to_string() 
 res_doc = api.post_translate_document(request)
 print(res_doc.message)
@@ -76,7 +81,7 @@ Make your solution using [SDK](https://github.com/groupdocs-translation-cloud), 
 
 #### 1. Get API keys if you haven't
 
-Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/translation/create-new-app-and-get-app-key-and-sid).
+Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/total/creating-and-managing-application/).
 
 #### 2. Install SDK
 
@@ -95,7 +100,7 @@ python setup.py install
 #### 3. Run Demo
 
   * Checkout the SDK or get from PiPy 
-  * Set Your AppSid & AppKey
+  * Set Your client_id & client_secret
   * Run Jupyter Notebook [demo.ipynb](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/demo.ipynb)
  
 --------------------------- 

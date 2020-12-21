@@ -39,14 +39,14 @@ from groupdocstranslationcloud.api.storage_api import StorageApi
 class TestHelper(object):
 
     configuration = Configuration(
-        apiKey="",
-        appSid="",
+        client_secret="",
+        client_id="",
         basePath="https://api.groupdocs.cloud/v1.0/translation",
         authPath="https://api.groupdocs.cloud/connect/token",
         debug=False)
 
-    if not configuration.api_key or not configuration.app_sid:
-        raise Exception("Setup AppSID and AppKEY in TestsHelper -> configuration.")
+    if not configuration.client_secret or not configuration.client_id:
+        raise Exception("Setup client_id and client_secret in TestsHelper -> configuration.")
 
     client = Client(configuration)
     translation = TranslationApi(client)
