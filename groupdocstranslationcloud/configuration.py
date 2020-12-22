@@ -98,7 +98,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         # Log file handler
         self.logger_file_handler = None
 
-        self.logger_file = log_file
+        if debug == True:
+            self.logger_file = log_file
+        else:
+            self.logger_file = None
 
         self.debug = debug
 
