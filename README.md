@@ -51,44 +51,6 @@ Additionally, user could obtain translated file in any other format available fo
 
 Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](https://github.com/groupdocs-translation-cloud) in many development languages to make it easier to integrate with us.
 
-## Examples
-
-```python
-from groupdocstranslationcloud.configuration import Configuration
-from groupdocstranslationcloud.api.translation_api import TranslationApi
-from groupdocstranslationcloud.models.translate_text import TranslateText
-from groupdocstranslationcloud.models.translate_document import TranslateDocument
-
-#enter valid client_secret and client_id
-configuration = Configuration(client_secret="", client_id="")
-api = TranslationApi(configuration)
-
-# text translation
-pair = "en-fr"
-text = "Welcome to Paris"
-translator = TranslateText(pair, text)
-request = translator.to_string()
-res_text = api.post_translate_text(request)
-print(res_text.translation)
-
-#document translation
-pair = "en-fr"
-_format = "docx"
-ourformat = "docx"
-storage = "First Storage"
-name = "test.docx"
-folder = ""
-savepath = ""
-savefile = "test_python.docx"  
-masters = False
-elements = []
-translator = TranslateDocument(pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements)
-request = translator.to_string()
-res_doc = api.post_translate_document(request)
-print(res_doc.message)
-```
-_________________________
-
 ## Quickstart
 
 Make your solution using [SDK](https://github.com/groupdocs-translation-cloud), follow these steps:
@@ -117,8 +79,6 @@ python setup.py install
   * Set Your client_id & client_secret
   * Run Jupyter Notebook [demo.ipynb](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/demo.ipynb)
 
----------------------------
-
 ### Structure
 
 This project includes:
@@ -138,6 +98,35 @@ This project includes:
 - Python :: 3.6
 - Python :: 3.7
 - Python :: 3.8
+
+## Translate Word document
+
+```python
+# Load the gem
+import groupdocs_translation_cloud
+# Get Client Id and Client Secret from https://dashboard.groupdocs.cloud
+my_client_id = ""
+my_client_secret = ""
+
+# Create instance of the API
+configuration = Configuration(apiKey=my_client_secret, appSid=my_client_id)
+api = TranslationApi(configuration)
+
+#document translation
+pair = "en-fr"
+_format = "docx"
+storage = "First Storage"
+name = "test.docx"
+folder = ""
+savepath = ""
+savefile = "test_python.docx"  
+masters = False
+elements = []
+translator = TranslateDocument(pair, _format, storage, name, folder, savepath, savefile, masters, elements)
+request = translator.to_string()
+res_doc = api.post_translate_document(request)
+print(res_doc.message)
+```
 
 
 
