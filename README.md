@@ -1,63 +1,114 @@
-![](https://img.shields.io/badge/api-v1.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/groupdocs-translation-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/groupdocs-translation-cloud) ![PyPI - Implementation](https://img.shields.io/pypi/implementation/groupdocs-translation-cloud) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/groupdocs-translation-cloud) [![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-python)](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/LICENSE)
 # Python SDK for Translating Cloud Documents
 
-[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation) is Cloud API to translate Word, Excel and PowerPoint files as well as plain text.
+![](https://img.shields.io/badge/api-v1.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/groupdocs-translation-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/groupdocs-translation-cloud) ![PyPI - Implementation](https://img.shields.io/pypi/implementation/groupdocs-translation-cloud) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/groupdocs-translation-cloud) [![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-python)](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/LICENSE)
 
-For convenience of our Java customers we introduce a simple SDK used to add translation of Microsoft Word documents, Microsoft Excel workbooks, Microsoft PowerPoint presentations and plain text to your app with merely a few lines of code.
+[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
 
-In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translation of .doc, .docx, .docm, .xls, .xlsx, .xlsm, .ppt, .pptx, .pptm files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in our Cloud or will return translated text.
+[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word, Excel, PowerPoint, PDF, Markdown files as well as plain text.
 
-It is easy to get started with GroupDocs.Translation Cloud, and there is nothing to install. Create an account at [GroupDocs Cloud](https://dashboard.groupdocs.cloud/#/) and get your application information, then you are ready to use [SDKs](https://github.com/groupdocs-translation-cloud)
+For convenience of our Python customers, we introduce a simple SDK that assists to add translation of Microsoft Word documents, Microsoft Excel workbooks, Microsoft PowerPoint presentations, PDF documents, Markdown files, and plain text to your app with merely a few lines of code.
+
+In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translation of .doc, .docx, .docm, .xls, .xlsx, .xlsm, .ppt, .pptx, .pptm, .pdf, .md, .txt files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in our Cloud or will return translated text.
+
+It is easy to get started with GroupDocs.Translation Cloud and there is nothing to install. Create an account at GroupDocs Cloud and get your application information, then you are ready to use SDKs.
 
 ## Cloud Document Translation Features
 
-- Translation of Microsoft Word, Microsoft Excel,, and Microsoft PowerPoint documents
-- [10 languages and 22 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
+- [28 languages and 60 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents
 - Translation of cells, charts, tables, pivot tables in Excel documents
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations
+- Translation of PDF files
+- Translation of Markdown files
 - Translation of plain text
 - API that allows you to manage your files and folders in our Cloud
 
-## Supported Formats
+## Supported Translation Formats
 
-GroupDocs.Translation Cloud allows to translate Microsoft Word and Excel documents. User should specify format of document to translate putting in the request’s body:
+You can specify format of document to translate putting in the request’s body:
 
-- **extension of word file (docx / docm / doc)** — to translate **Microsoft Word document**
-- **extension of excel file (xlsx / xlsm / xls**) — to translate **Microsoft Excel workbook**
-- **extension of powerpoint file (ppt / pptx / pptm**) — to translate **Microsoft PowerPoint presentation**
+- **extension of word file (docx / docm / doc)** — to translate **Microsoft Word® document**
+- **extension of excel file (xlsx / xlsm / xls)** — to translate **Microsoft Excel® workbook**
+- **extension of powerpoint file (ppt / pptx / pptm)** — to translate **Microsoft PowerPoint® presentation**
+- **extension of PDF file (pdf)** — to translate **Adobe PDF document**
+- **extension of Markdown file (md)** — to translate **Markdown file**
 
-Additionally, user could obtain translated file in any other format available for conversion. Just specify output format of translated document putting file extension in the request’s body:
+Additionally, user could obtain translated file in any other format available for conversion. Just specify output format of translated document by putting file extension in the request’s body:
 
 - **doc, docx** — docx, rtf, html, odt, txt, md, pdf, tiff, svg, xps
 - **xls, xlsx** — xlsx, xlsb, html, pdf, xps, ods, md, docx, pptx, tiff
 - **ppt, pptx** — pptx, pdf, tiff, html, xps, odp
+- **pdf** — docx, pptx, html, svg, xps
+- **md** — html, pdf, docx, tiff, xps
 
-## New Features & Enhancements Release 20.12
-- Conversion of translated files to other formats is added
+Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/supported-formats/) for details.
 
-## New Features & Enhancements Release 20.10
-- Microsoft PowerPoint presentations translation
-- French-Italian language pair support
+## Supported Translation Languages
 
-## New Features & Enhancements Release 20.9
-- French-German language pair support
+- **en-fr / fr-en** — to translate from English to French or from French to English.
+- **en-de / de-en** — to translate from English to German or from German to English.
+- **en-es / es-en** — to translate from English to Spanish or from Spanish to English.
+- **en-it / it-en** — to translate from English to Italian or from Italian to English.
+- **en-zh / zh-en** — to translate from English to Chinese or from Chinese to English.
+- **en-ru / ru-en** — to translate from English to Russian or from Russian to English
+- **en-ar / ar-en** — to translate from English to Arabic or from Arabic to English
+- **en-pt / pt-en** — to translate from English to Portuguese or from Portuguese to English
+- **en-pl / pl-en** — to translate from English to Polish or from Polish to English
+- **en-uk / uk-en** — to translate from English to Ukrainian or from Ukrainian to English
+- **en-vi / vi-en** — to translate from English to Vietnamese or from Vietnamese to English
+- **en-id / id-en** — to translate from English to Indonesian or from Indonesian to English
+- **en-hi / hi-en** — to translate from English to Hindi or from Hindi to English
+- **en-el / el-en** — to translate from English to Greek or from Greek to English
+- **en-nl / nl-en**— to translate from English to Dutch or from Dutch to English
+- **en-hu / hu-en** — to translate from English to Hunngarian or from Hungarian to English
+- **en-sv / sv-en** — to translate from English to Swedish or from Swedish to English
+- **en-tr / tr-en** — to translate from English to Turkish or from Turkish to English
+- **en-ja / ja-en** — to translate from English to Japanese or from Japanese to English
+- **en-ko / ko-en** — to translate from English to Korean or from Korean to English
+- **en-cs / cs-en** — to translate from English to Czech or from Czech to English
+- **en-fi / fi-en** — to translate from English to Finnish or from Finnish to English
+- **en-ga / ga-en** — to translate from English to Irish or from Irish to English
+- **en-fa / fa-en** — to translate from English to Farsi or from Farsi to English
+- **en-az / az-en** — to translate from English to Azerbaijani or from Azerbaijani to English
+- **en-he / he-en** — to translate from English to Hebrew or from Hebrew to English
+- **en-sk / sk-en** — to translate from English to Slovak or from Slovak to English
 
-## New Features & Enhancements Release 20.8
-- GroupDocs.Translation Java SDK
+--- 
+- **fr-de / de-fr** — to translate from French to German or from German to French
+- **fr-it / it-fr** — to translate from French to Italian or from Italian to French
+-  **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
+
+## JSON Request Details
+
+You can put the following information in the requests body to translate a document:
+
+- **format** — format of file for translation (e.g. docx)
+- **outformat** — format of translated file (e.g. pdf)
+- **pair** — language translation pair (e.g. en-fr)
+- **name** — name of file to translate (e.g. test.docx)
+- **folder** — folder of file to translate (e.g. translate)
+- **savepath** — folder for translated file (e.g. translated)
+- **savefile** — name of translated file (e.g. translation.docx)
+- **storage** — name of storage
+- **masters** — if masters slides should be translated (only for presentations, pass true or false)
+- **elements** — slide pages to translate (only for presentations, pass empty list to translate whole presentation)
+
+To translate plain text the following information should be put in the requests body:
+
+- **pair** — language translation pair (e.g. en-fr)
+- **text** — text to translate (e.g. hello world)
 
 
 ## How to use the SDK?
 
-Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](https://github.com/groupdocs-translation-cloud) in many development languages to make it easier to integrate with us.
+Our API is completely independent of your operating system, database system, or development language. You can use any language and platform that supports HTTP to interact with our API. However, manually writing client code can be difficult, error-prone, and time-consuming. Therefore, we have provided and support [SDKs](https://github.com/groupdocs-translation-cloud) in many development languages to make it easier for your Cloud Apps to integrate with us.
 
 ## Quickstart
 
-Make your solution using [SDK](https://github.com/groupdocs-translation-cloud), follow these steps:
-
 #### 1. Get API keys if you haven't
 
-Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/total/creating-and-managing-application/).
+Make a personal account on [GroupDocs Cloud Dashboard](https://dashboard.groupdocs.cloud/#/) and click _Get Keys_. These keys are useful for all GroupDocs Cloud products. If you have any trouble, look at this [detailed manual](https://docs.groupdocs.cloud/total/creating-and-managing-application/). Once your keys are received, please follow this [article](https://docs.groupdocs.cloud/translation/quickstart/) to try GroupDocs.Translation Cloud or familiarize with [Developer guide](https://docs.groupdocs.cloud/translation/developer-guide/) for further details.
 
 #### 2. Install SDK
 
@@ -76,7 +127,7 @@ python setup.py install
 #### 3. Run Demo
 
   * Checkout the SDK or get from PiPy
-  * Set Your client_id & client_secret
+  * Set Your client\_id & client\_secret
   * Run Jupyter Notebook [demo.ipynb](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/demo.ipynb)
 
 ### Structure
@@ -132,9 +183,9 @@ print(res_doc.message)
 
 ## GroupDocs.Translation Cloud SDKs in Popular Languages
 
-| .NET | Java | Python |
-|---|---|---|
-| [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) |[GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) |
-| [NuGet](https://www.nuget.org/packages/GroupDocs.translation-Cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) | [PIP](https://pypi.org/project/groupdocs-translation-cloud/) |
+| .NET | Java | Python | Android |
+|---|---|---|---|
+| [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-java) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [GitHub](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) |
+| [NuGet](https://www.nuget.org/packages/GroupDocs.translation-Cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud) | [PIP](https://pypi.org/project/groupdocs-translation-cloud/) | [Maven](https://repository.groupdocs.cloud/webapp/#/artifacts/browse/tree/General/repo/com/groupdocs/groupdocs-translation-cloud-android) |
 
-[Home](https://www.groupdocs.cloud/) | [Product Page](https://products.groupdocs.cloud/translation/python) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/viewer/family) | [API Reference](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+[Product Page](https://products.groupdocs.cloud/translation/android/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-android) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
