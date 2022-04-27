@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 from os import path
 
 NAME = "groupdocs-translation-cloud"
-VERSION = "22.2"
+VERSION = "22.4"
 # To install the library, run the following
 #
 # python setup.py install
