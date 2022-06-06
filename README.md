@@ -15,7 +15,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [31 languages and 66 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [32 languages and 68 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
@@ -77,6 +77,7 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **en-th / th-en** — to translate from English to Thai or from Thai to English
 - **en-ro / ro-en** — to translate from English to Romanian or from Romanian to English
 - **en-ms / ms-en** — to translate from English to Malay or from Malay to English
+- **en-bg / bg-en** — to translate from English to Bulgarian or from Bulgarian to English
 - **fr-de / de-fr** — to translate from French to German or from German to French
 - **fr-it / it-fr** — to translate from French to Italian or from Italian to French
 -  **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
