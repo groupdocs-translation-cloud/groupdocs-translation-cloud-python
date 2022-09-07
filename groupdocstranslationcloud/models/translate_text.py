@@ -41,15 +41,17 @@ class TranslateText:
         """
     model_types = {
         'Pair': 'str',
-        'Text': 'str'
+        'Text': 'str',
+        'Origin': 'str'
     }
 
     attribute_map = {
         'Pair': 'pair',
-        'Text': 'text'
+        'Text': 'text',
+        'Origin': "origin"
     }
 
-    def __init__(self, pair, text):
+    def __init__(self, pair, text = "text"):
         """
         :param str pair: language pair
         :param str text: text to translate
@@ -58,5 +60,5 @@ class TranslateText:
         self.Text = text            # text to translate
 
     def to_string(self):
-        request = [{"pair": self.Pair, "text": self.Text}]
+        request = [{"pair": self.Pair, "text": self.Text, "origin": self.Origin}]
         return json.dumps(request)

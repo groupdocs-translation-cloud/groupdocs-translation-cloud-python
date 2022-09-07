@@ -49,7 +49,10 @@ class TranslateDocument:
         'Savepath': 'str',
         'Savefile': 'str',
         'Masters':  'bool',
-        'Elements': 'list'
+        'Elements': 'list',
+        'Separator': 'str',
+        'Codelist': 'list',
+        'Frontlists': 'list'
     }
 
     attribute_map = {
@@ -62,10 +65,13 @@ class TranslateDocument:
         'Savepath': 'savepath',
         'Savefile': 'savefile',
         'Masters': 'masters',
-        'Elements': 'elements'
+        'Elements': 'elements',
+        'Separator': 'separator',
+        'Codelist': 'codelist',
+        'Frontlists': 'frontlists'
     }
 
-    def __init__(self, pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements):
+    def __init__(self, pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements, separator=",", codelist = null, frontlists = null):
         """
         :param str Pair: language pair
         :param str Format: document format, put file extension here
@@ -88,6 +94,7 @@ class TranslateDocument:
         self.Savefile = savefile
         self.Masters = masters
         self.Elements = elements
+        self.Separator = separator
 
     def to_string(self):
         request = [{"pair": self.Pair, "format": self.Format, "outformat": self.Outformat, "storage": self.Storage, 
