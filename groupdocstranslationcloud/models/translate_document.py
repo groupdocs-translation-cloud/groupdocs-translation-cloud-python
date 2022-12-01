@@ -51,8 +51,9 @@ class TranslateDocument:
         'Masters':  'bool',
         'Elements': 'list',
         'Separator': 'str',
-        'Codelist': 'list',
-        'Frontlists': 'list'
+        'Codelist': 'dict',
+        'Frontlists': 'dict',
+        'Optimizepdffontsize': 'bool'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class TranslateDocument:
         'Elements': 'elements',
         'Separator': 'separator',
         'Codelist': 'codelist',
-        'Frontlists': 'frontlists'
+        'Frontlists': 'frontlists',
+        'Optimizepdffontsize': 'optimizepdffontsize'
     }
 
-    def __init__(self, pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements, separator=",", codelist = null, frontlists = null):
+    def __init__(self, pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements, separator=",", codelist = None, frontlists = None, optimizepdffontsize = False):
         """
         :param str Pair: language pair
         :param str Format: document format, put file extension here
@@ -82,7 +84,11 @@ class TranslateDocument:
         :param str Savepath: folder(s) where to save translated file
         :param str Savefile: translated file name
         :param bool Masters: if master slides in presentation should be translated
-        :param list Elements: to translate only selected slides 
+        :param list Elements: to translate only selected slides
+        :param str Separator:  delimiter for CSV files
+        :param dict {str: list(str)} Codelist: dictionary of short code syntax in Hugo to translate, where the key is short code name, and value is a list of parameters names that require translation
+        :param dict {int: list(list(str))} Frontlists: dictionary of front matter syntax in Hugo to translate, where the key is zero based front matter index and value is list of paths to values that require translation, each path is also a list
+        :param bool Optimizepdffontsize: if true, font size will be selected, that translation will fit paragraph rectangle
         """
         self.Pair = pair            
         self.Format = _format
@@ -95,9 +101,13 @@ class TranslateDocument:
         self.Masters = masters
         self.Elements = elements
         self.Separator = separator
+        self.Codelist = codelist
+        self.Frontlists = frontlists
+        self.Optimizepdffontsize = optimizepdffontsize
 
     def to_string(self):
         request = [{"pair": self.Pair, "format": self.Format, "outformat": self.Outformat, "storage": self.Storage, 
                     "name": self.Name, "folder": self.Folder, "savepath": self.Savepath, "savefile": self.Savefile, 
-                    "masters": self.Masters, "elements": self.Elements}]
+                    "masters": self.Masters, "elements": self.Elements, "separator": self.Separator, "frontlists": self.Frontlists,
+                    "optimizepdffontsize": self.Optimizepdffontsize}]
         return  json.dumps(request)         
