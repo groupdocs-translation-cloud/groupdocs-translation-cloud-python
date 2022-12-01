@@ -1,12 +1,12 @@
 # Python SDK for Translating Cloud Documents
 
-![](https://img.shields.io/badge/api-v1.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/groupdocs-translation-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/groupdocs-translation-cloud) ![PyPI - Implementation](https://img.shields.io/pypi/implementation/groupdocs-translation-cloud) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/groupdocs-translation-cloud) [![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-python)](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python/blob/master/LICENSE)
+![GitHub](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-android)![](https://img.shields.io/badge/api-v1.0-lightgrey) ![Nuget](https://img.shields.io/nuget/v/GroupDocs.translation-Cloud) ![Nuget](https://img.shields.io/nuget/dt/GroupDocs.translation-Cloud) [![GitHub license](https://img.shields.io/github/license/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet)](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet/blob/master/LICENSE)
 
-[Product Page](https://products.groupdocs.cloud/translation/python/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
+[Product Page](https://products.groupdocs.cloud/translation/dotnet/) | [Docs](https://docs.groupdocs.cloud/translation/) | [Demos](https://products.groupdocs.app/translation/family) | [Swagger UI](https://apireference.groupdocs.cloud/translation/) | [Examples](https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-dotnet) | [Blog](https://blog.groupdocs.cloud/category/translation/) | [Search](https://search.groupdocs.cloud/) | [Free Support](https://forum.groupdocs.cloud/c/translation) | [Free Trial](https://purchase.groupdocs.cloud/trial)
 
-[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word, Excel, PowerPoint, PDF, HTML, Markdown, OpenDocument, RESX files as well as plain text.
+[GroupDocs.Translation Cloud](https://products.groupdocs.cloud/translation/) is Cloud API to translate Word, Excel, PowerPoint, PDF, HTML, Markdown (including Markdown with Hugo syntax), OpenDocument, RESX files as well as plain text.
 
-For convenience of our Python customers, we introduce a simple SDK that assists to add translation of Microsoft Word documents, Microsoft Excel workbooks, Microsoft PowerPoint presentations, PDF documents, Markdown, OpenDocument files, and plain text to your app with merely a few lines of code.
+For convenience of our .NET customers, we introduce a simple SDK that assists to add translation of Microsoft Word documents, Microsoft Excel workbooks, Microsoft PowerPoint presentations, PDF documents, Markdown (including Hugo), OpenDocument files, and plain text to your app with merely a few lines of code.
 
 In detail, it's a set of SDKs for document and plain text translation in our Cloud. It supports translation of .doc, .docx, .docm, .xls, .xlsx, .xlsm, .ppt, .pptx, .pptm, .pdf, .html, .md, .odt, .ods, .odp, .csv, .tsv, .rtf, .txt, .resx files. Just pass a specific file or text to the GroupDocs.Translation Cloud API, and it will translate and save translated file in our Cloud or will return translated text.
 
@@ -15,12 +15,13 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [35 languages and 74 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [37 languages and 78 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
 - Translation of PDF files
 - Translation of Markdown files
+- Translation of Hugo syntax in Markdown files
 - Translation of plain text
 - API that allows you to manage your files and folders in our Cloud
 
@@ -36,6 +37,7 @@ You can specify format of document to translate putting in the request’s body:
 - **extension of HTML file (html)** — to translate **HTML file**
 - **extension of OpenDocument file (odt / ods / odp)** — to translate files created in OpenOffice or similar suits
 - **extension of Resources file (resx)** — to translate **resource file for .NET application**
+- **hugo** - to translate Markdown file with Hugo syntax
 
 Additionally, user could obtain translated file in any other format available for conversion. Just specify output format of translated document by putting file extension in the request’s body:
 
@@ -84,9 +86,11 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **en-be / be-en** — to translate from English to Bengali or from Bengali to English
 - **en-da / da-en** — to translate from English to Danish or from Danish to English
 - **en-no / no-en** — to translate from English to Norwegian or from Norwegian to English
+- **en-lv / lv-en** — to translate from English to Latvian or from Latvian to English
+- **en-lt / lt-en** — to translate from English to Lithuanian or from Lithuanian to English
 - **fr-de / de-fr** — to translate from French to German or from German to French
 - **fr-it / it-fr** — to translate from French to Italian or from Italian to French
--  **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
+- **fr-ar / ar-fr** — to translate from French to Arabic or from Arabic to French
 
 ## JSON Request Details
 
@@ -103,8 +107,9 @@ You can put the following information in the requests body to translate a docume
 - **masters** — if masters slides should be translated (only for presentations, pass true or false)
 - **elements** — slide pages to translate (only for presentations, pass empty list to translate whole presentation)
 - **separator** — delimiter for CSV files
-- **codeList** — elements of short code syntax in Hugo to translate
-- **frontLists** — elements of yaml front matter syntax in Hugo to translate
+- **shortcodedict** — dictionary of short code syntax in Hugo to translate, where the key is short code name, and value is a list of parameters names that require translation
+- **frontmatterdicts** — dictionary of front matter syntax in Hugo to translate, where the key is zero based front matter index and value is list of paths to values that require translation, each path is also a list
+- **optimizepdffontsize** — if true, font size will be selected, that translation will fit paragraph rectangle
 
 To translate plain text the following information should be put in the requests body:
 
