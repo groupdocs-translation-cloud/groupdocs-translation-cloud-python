@@ -2,7 +2,7 @@
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
 # <copyright company="Aspose" file="api_client.py">
-# Copyright (c) 2020 GroupDocs.Translation for Cloud
+# Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # 
 # <summary>

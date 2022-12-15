@@ -2,7 +2,7 @@
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
 # <copyright company="Aspose" file="translate_text.py">
-# Copyright (c) 2020 GroupDocs.Translation for Cloud
+# Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # <summary>
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,9 +27,10 @@
 # """
 
 """
- * Creqtes body for text translation request
+ * Creates body for text translation request
 """
 import json
+
 
 class TranslateText:
     """
@@ -42,23 +43,29 @@ class TranslateText:
     model_types = {
         'Pair': 'str',
         'Text': 'str',
-        'Origin': 'str'
+        'Origin': 'str',
+        'Type': 'str'
     }
 
     attribute_map = {
         'Pair': 'pair',
         'Text': 'text',
-        'Origin': "origin"
+        'Origin': 'origin',
+        'Type': 'type'
     }
 
-    def __init__(self, pair, text = "text"):
+    def __init__(self, pair, text="text", type ="", origin="text"):
         """
         :param str pair: language pair
         :param str text: text to translate
+        :param str typr: use "md" if text contains markdown syntax
+        :param str origin: text origin source
         """
-        self.Pair = pair           # language pair
-        self.Text = text            # text to translate
+        self.Pair = pair  # language pair
+        self.Text = text  # text to translate
+        self.Origin = origin  # text origin source
+        self.Type = type  # use "md" if text contains markdown syntax
 
     def to_string(self):
-        request = [{"pair": self.Pair, "text": self.Text, "origin": self.Origin}]
+        request = [{"pair": self.Pair, "text": self.Text, "type": self.Type, "origin": self.Origin}]
         return json.dumps(request)

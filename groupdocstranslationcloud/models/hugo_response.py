@@ -1,8 +1,8 @@
 # coding: utf-8
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
-# <copyright company="Aspose" file="text_response.py">
-# Copyright (c) 2020 GroupDocs.Translation for Cloud
+# <copyright company="Aspose" file="document_response.py">
+# Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # <summary>
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -11,10 +11,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-#
+# 
 # The above copyright notice and this permission notice shall be included in all
 # copies or substantial portions of the Software.
-#
+# 
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -29,7 +29,7 @@
 from groupdocstranslationcloud.models import BaseModel
 
 
-class TextResponse(BaseModel):
+class HugoResponse(BaseModel):
     """
     Attributes:
       model_types (dict):   The key is attribute name
@@ -40,28 +40,33 @@ class TextResponse(BaseModel):
     model_types = {
         'status': 'str',
         'message': 'str',
-        'translation': 'str'
+        'frontmatter': 'str',
+        'shortcode': 'str'
     }
 
     attribute_map = {
         'status': 'status',
         'message': 'message',
-        'translation': 'translation'
+        'frontmatter': 'frontmatter',
+        'shortcode': 'shortcode'
     }
 
-    def __init__(self, status="", message="", translation=""):
+    def __init__(self, status="", message="", frontmatter={}, shortcode={}):
         """
+
         :type status: str
         :type message: str
-        :type translation: str
+        :type frontmatter: dict[int: list(list(str)))]
+        :type shortcode: dict[int: list(str)}]
         """
         self._status = status  # type: str
         self._message = message  # type: str
-        self._translation = translation #type: str
+        self._frontmatter = frontmatter   # type: dict[int: list(list(str)))]
+        self._shortcode = shortcode   # type: dict[int: list(str)}]
 
     @property
     def status(self):
-        """Operation status
+        """Gets status
         :return: status.
         :type: str
         """
@@ -69,7 +74,7 @@ class TextResponse(BaseModel):
 
     @status.setter
     def status(self, status):
-        """Operation status
+        """Sets status
         :param status: status.
         :type: str
         """
@@ -88,7 +93,7 @@ class TextResponse(BaseModel):
 
     @message.setter
     def message(self, message):
-        """Sets rersponse message.
+        """Sets response message.
         :param message: message.
         :type: str
         """
@@ -98,21 +103,39 @@ class TextResponse(BaseModel):
         self._message = message
 
     @property
-    def translation(self):
+    def frontmatter(self):
+        """Gets frontmatter
+        :return: frontmatter.
+        :type: dict
         """
-        Gets translated text
-        :return: translated text
-        :type: str
-        """
-        return self._translation
+        return self._frontmatter
 
-    @translation.setter
-    def translation(self, translation):
+    @frontmatter.setter
+    def frontmatter(self, frontmatter):
+        """Sets frontmatter.
+        :param frontmatter: frontmatter.
+        :type: dict
         """
-        Sets translated text
-        :param translation: translated text
-        :type: str
+        # if frontmatter is None:
+        #     raise ValueError("Invalid value for `frontmatter`, must not be `None`")
+
+        self._frontmatter = frontmatter
+
+    @property
+    def shortcode(self):
+        """Gets shortcode
+        :return: shortcode.
+        :type: dict
         """
-        if translation is None:
-            raise ValueError("Invalid value for `translation`, must not be `None`")
-        self._translation = translation
+        return self._shortcode
+
+    @shortcode.setter
+    def shortcode(self, shortcode):
+        """Sets shortcode.
+        :param shortcode: shortcode.
+        :type: dict
+        """
+        # if shortcode is None:
+        #     raise ValueError("Invalid value for `shortcode`, must not be `None`")
+
+        self._shortcode = shortcode

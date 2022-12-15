@@ -2,7 +2,7 @@
 # """
 # --------------------------------------------------------------------------------------------------------------------
 #  <copyright company="Aspose" file="test_helper.py">
-#    Copyright (c) 2020 GroupDocs.Translation for Cloud
+#    Copyright (c) 2022 GroupDocs.Translation for Cloud
 #  </copyright>
 #  <summary>
 #   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,6 +57,7 @@ class TestHelper(object):
     test_src = os.path.join(parent_dir, 'testdata')
     test_dst = os.path.join(parent_dir, 'testresult')
     folder = 'TranslationTestDoc'
+    # folder = ""
 
     @classmethod
     def get_folder(cls):

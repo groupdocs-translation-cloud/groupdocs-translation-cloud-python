@@ -2,7 +2,7 @@
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
 # <copyright company="Aspose" file="configuration.py">
-# Copyright (c) 2020 GroupDocs.Translation for Cloud
+# Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # 
 # <summary>

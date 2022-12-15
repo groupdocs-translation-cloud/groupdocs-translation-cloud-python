@@ -2,7 +2,7 @@
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
 # <copyright company="Aspose" file="translate_document.py">
-# Copyright (c) 2020 GroupDocs.Translation for Cloud
+# Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # <summary>
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,9 +27,18 @@
 # """
 
 """
-Represents information about strict regions to recognize text
+* Creates body for document translation request
 """
 import json
+import ast
+
+
+def list_coder(list_to_decode):
+    tmp_list = []
+    for i in list_to_decode:
+        tmp_list.append(str(i) + ': ' + json.dumps(list_to_decode[0]))
+    return "{" + ", ".join(tmp_list) + "}"
+
 
 class TranslateDocument:
     """
@@ -48,11 +57,11 @@ class TranslateDocument:
         'Folder': 'str',
         'Savepath': 'str',
         'Savefile': 'str',
-        'Masters':  'bool',
+        'Masters': 'bool',
         'Elements': 'list',
         'Separator': 'str',
-        'Codelist': 'dict',
-        'Frontlists': 'dict',
+        'Codelist': 'str',
+        'Frontlists': 'str',
         'Optimizepdffontsize': 'bool'
     }
 
@@ -73,7 +82,10 @@ class TranslateDocument:
         'Optimizepdffontsize': 'optimizepdffontsize'
     }
 
-    def __init__(self, pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements, separator=",", codelist = None, frontlists = None, optimizepdffontsize = False):
+
+
+    def __init__(self, pair, _format, outformat, storage, name, folder, savepath, savefile, masters, elements,
+                 separator=",", codelist={}, frontlists={}, optimizepdffontsize=False):
         """
         :param str Pair: language pair
         :param str Format: document format, put file extension here
@@ -90,7 +102,7 @@ class TranslateDocument:
         :param dict {int: list(list(str))} Frontlists: dictionary of front matter syntax in Hugo to translate, where the key is zero based front matter index and value is list of paths to values that require translation, each path is also a list
         :param bool Optimizepdffontsize: if true, font size will be selected, that translation will fit paragraph rectangle
         """
-        self.Pair = pair            
+        self.Pair = pair
         self.Format = _format
         self.Outformat = outformat
         self.Storage = storage
@@ -106,8 +118,10 @@ class TranslateDocument:
         self.Optimizepdffontsize = optimizepdffontsize
 
     def to_string(self):
-        request = [{"pair": self.Pair, "format": self.Format, "outformat": self.Outformat, "storage": self.Storage, 
-                    "name": self.Name, "folder": self.Folder, "savepath": self.Savepath, "savefile": self.Savefile, 
-                    "masters": self.Masters, "elements": self.Elements, "separator": self.Separator, "frontlists": self.Frontlists,
-                    "optimizepdffontsize": self.Optimizepdffontsize}]
-        return  json.dumps(request)         
+
+        request = [{"pair": self.Pair, "format": self.Format, "outformat": self.Outformat, "storage": self.Storage,
+                    "name": self.Name, "folder": self.Folder, "savepath": self.Savepath, "savefile": self.Savefile,
+                    "masters": self.Masters, "elements": self.Elements, "separator": self.Separator, "optimizepdffontsize": self.Optimizepdffontsize}]
+        codelist = '"shortcodedict": ' + list_coder(self.Codelist)
+        frontlists = '"frontmatterdict": ' + list_coder(self.Frontlists)
+        return ", ".join([json.dumps(request)[:-2], codelist, frontlists]) + "}]"
