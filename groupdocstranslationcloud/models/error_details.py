@@ -2,7 +2,7 @@
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
 # <copyright company="Aspose" file="error_details.py">
-# Copyright (c) 2020 GroupDocs.Translation for Cloud
+# Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # <summary>
 # Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,7 +1,7 @@
 # coding: utf-8
 # """Copyright
 # --------------------------------------------------------------------------------------------------------------------
-# <copyright company="Aspose" file="__init__.py">
+# <copyright company="Aspose" file="translate_text.py">
 # Copyright (c) 2022 GroupDocs.Translation for Cloud
 # </copyright>
 # <summary>
@@ -26,21 +26,42 @@
 # --------------------------------------------------------------------------------------------------------------------
 # """
 
-from .base_model import BaseModel
-from .disc_usage import DiscUsage
-from .error import Error
-from .error_details import ErrorDetails
-from .file_version import FileVersion
-from .file_versions import FileVersions
-from .files_list import FilesList
-from .files_upload_result import FilesUploadResult
-from .object_exist import ObjectExist
-from .storage_exist import StorageExist
-from .storage_file import StorageFile
-from .text_response import TextResponse
-from .document_response import DocumentResponse
-from .translate_text import TranslateText
-from .translate_document import TranslateDocument
-from .translate_hugo import TranslateHugo
-from .hugo_response import HugoResponse
+"""
+ * Creates body for Hugo translation request
+"""
+import json
 
+
+class TranslateHugo:
+    """
+        Attributes:
+          model_types (dict):   The key is attribute name
+                                and the value is attribute type.
+          attribute_map (dict): The key is attribute name
+                                and the value is json key in definition.
+        """
+    model_types = {
+        'FileName': 'str',
+        'Folder': 'str',
+        'Storage': 'str'
+    }
+
+    attribute_map = {
+        'FileName': 'filename',
+        'Folder': 'folder',
+        'Storage': 'storage'
+    }
+
+    def __init__(self, filename, folder, storage):
+        """
+        :param str filename: file name to translate
+        :param str folder: path to folder containing file
+        :param str storage: storage where file is uploaded
+        """
+        self.FileName = filename
+        self.Folder = folder
+        self.Storage = storage
+
+    def to_string(self):
+        request = [{"name": self.FileName, "folder": self.Folder, "storage": self.Storage}]
+        return json.dumps(request)
