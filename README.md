@@ -66,7 +66,7 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **en-id / id-en** — to translate from English to Indonesian or from Indonesian to English
 - **en-hi / hi-en** — to translate from English to Hindi or from Hindi to English
 - **en-el / el-en** — to translate from English to Greek or from Greek to English
-- **en-nl / nl-en**— to translate from English to Dutch or from Dutch to English
+- **en-nl / nl-en** — to translate from English to Dutch or from Dutch to English
 - **en-hu / hu-en** — to translate from English to Hunngarian or from Hungarian to English
 - **en-sv / sv-en** — to translate from English to Swedish or from Swedish to English
 - **en-tr / tr-en** — to translate from English to Turkish or from Turkish to English
@@ -115,6 +115,7 @@ To translate plain text the following information should be put in the requests 
 
 - **pair** — language translation pair (e.g. en-fr)
 - **text** — text to translate (e.g. hello world)
+- **type** — use "md" if text contains markdown syntax
 
 
 ## How to use the SDK?
