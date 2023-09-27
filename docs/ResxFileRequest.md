@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.resx_file_request import ResxFileRequest
+from groupdocs-translation-cloud.models.resx_file_request import ResxFileRequest
 
 # TODO update the JSON string below
 json = "{}"

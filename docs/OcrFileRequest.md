@@ -4,25 +4,25 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source_language** | **str** | Language of original file | [default to 'en']
-**target_languages** | **List[str]** | List of target languages | 
-**file** | **bytearray** | File as byte array | [optional] 
-**original_file_name** | **str** | Type in the file name. If null will be as request ID. | [optional] 
-**url** | **str** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null | [optional] 
-**origin** | **str** | Url or name of application using this SDK. Not required. | [optional] 
-**saving_mode** | **str** | Toggle file saving mode for storage.  Is Files by default. | [optional] 
-**format** | **str** | Original file format | [optional] [default to 'Unknown']
-**ocrformat** | **str** | File format after recognition | [default to 'Pdf']
-**output_format** | **str** | output file format | 
-**rotation_angle** | **int** | Left to write angle to rotate scanned image / pdf | [optional] 
-**formatting** | **bool** | If document&#39;s formatting should be preserved, default true | [optional] [default to True]
-**route** | **str** | endpoints route | [optional] 
-**pages** | **List[int]** | List of pages to translate for scanned pdf | [optional] 
+**source_language** | **str** |  | [default to 'en']
+**target_languages** | **List[str]** |  | 
+**file** | **bytearray** |  | [optional] 
+**original_file_name** | **str** |  | [optional] 
+**url** | **str** |  | [optional] 
+**origin** | **str** |  | [optional] 
+**saving_mode** | **str** |  | [optional] 
+**format** | **str** |  | [optional] [default to 'Unknown']
+**ocrformat** | **str** |  | [default to 'Pdf']
+**output_format** | **str** |  | 
+**rotation_angle** | **int** |  | [optional] 
+**formatting** | **bool** |  | [optional] [default to True]
+**route** | **str** |  | [optional] 
+**pages** | **List[int]** |  | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.ocr_file_request import OcrFileRequest
+from groupdocs-translation-cloud.models.ocr_file_request import OcrFileRequest
 
 # TODO update the JSON string below
 json = "{}"

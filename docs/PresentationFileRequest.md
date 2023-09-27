@@ -15,12 +15,12 @@ Name | Type | Description | Notes
 **format** | **str** | Input file format | [optional] [default to 'Pptx']
 **output_format** | **str** | Output file format | [optional] 
 **masters** | **bool** | If translate master slides | [optional] [default to False]
-**slides** | **List[int]** | List of slides to translate | [optional] 
+**slides** | **List[int]** | List of slides to translate (1-based index). If not present, translate all slides | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.presentation_file_request import PresentationFileRequest
+from groupdocs-translation-cloud.models.presentation_file_request import PresentationFileRequest
 
 # TODO update the JSON string below
 json = "{}"

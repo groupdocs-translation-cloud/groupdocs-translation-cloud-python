@@ -14,12 +14,12 @@ Name | Type | Description | Notes
 **saving_mode** | **str** | Toggle file saving mode for storage.  Is Files by default. | [optional] 
 **output_format** | **str** | output file format | 
 **preserve_formatting** | **bool** | If document&#39;s formatting should be preserved, default true | [optional] [default to True]
-**pages** | **List[int]** | List of pages to translate | [optional] 
+**pages** | **List[int]** | List of pages to translate (1-based index). If not present, translate all pages | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.pdf_file_request import PdfFileRequest
+from groupdocs-translation-cloud.models.pdf_file_request import PdfFileRequest
 
 # TODO update the JSON string below
 json = "{}"
