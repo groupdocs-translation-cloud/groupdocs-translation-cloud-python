@@ -7,12 +7,12 @@ Name | Type | Description | Notes
 **status** | [**HttpStatusCode**](HttpStatusCode.md) |  | [optional] 
 **message** | **str** | If file was parsed correctly or text of error | [optional] 
 **frontmatters** | **List[List[str]]** | Structure of front matter syntax | [optional] 
-**shortcodes** | **List[List[str]]** | Structure of short code syntax | [optional] 
+**shortcodes** | **Dict[str, List[List[str]]]** | Structure of short code syntax | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.cloud_hugo_response import CloudHugoResponse
+from groupdocs-translation-cloud.models.cloud_hugo_response import CloudHugoResponse
 
 # TODO update the JSON string below
 json = "{}"

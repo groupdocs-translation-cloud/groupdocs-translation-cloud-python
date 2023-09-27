@@ -1,0 +1,4 @@
+rmdir /S /Q build
+rmdir /S /Q dist 
+python setup.py bdist_wheel
+python -m twine upload --repository testpypi dist/* -u groupdocscloud -p GroupDocs123AbC

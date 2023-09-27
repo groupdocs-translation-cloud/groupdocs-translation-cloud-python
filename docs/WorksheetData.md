@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.worksheet_data import WorksheetData
+from groupdocs-translation-cloud.models.worksheet_data import WorksheetData
 
 # TODO update the JSON string below
 json = "{}"

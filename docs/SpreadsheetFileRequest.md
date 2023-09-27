@@ -14,13 +14,13 @@ Name | Type | Description | Notes
 **saving_mode** | **str** | Toggle file saving mode for storage.  Is Files by default. | [optional] 
 **format** | **str** | Input file format | [default to 'Xlsx']
 **output_format** | **str** | output file format | 
-**worksheets** | **List[int]** | List of Worksheets to translate by sequence number | [optional] 
+**worksheets** | **List[int]** | List of Worksheets to translate by sequence number (1-based index). If not present, translate all worksheets | [optional] 
 **ranges** | [**Dict[str, WorksheetData]**](WorksheetData.md) | Dictionary of ranges in Excel workbooks | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.spreadsheet_file_request import SpreadsheetFileRequest
+from groupdocs-translation-cloud.models.spreadsheet_file_request import SpreadsheetFileRequest
 
 # TODO update the JSON string below
 json = "{}"
