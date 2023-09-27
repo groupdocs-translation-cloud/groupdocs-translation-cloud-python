@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.text_request import TextRequest
+from groupdocs-translation-cloud.models.text_request import TextRequest
 
 # TODO update the JSON string below
 json = "{}"

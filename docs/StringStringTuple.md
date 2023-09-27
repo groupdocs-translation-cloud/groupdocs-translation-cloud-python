@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.string_string_tuple import StringStringTuple
+from groupdocs-translation-cloud.models.string_string_tuple import StringStringTuple
 
 # TODO update the JSON string below
 json = "{}"

@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "GroupDocs.Translation.Api"
+name = "groupdocs-translation-cloud"
 version = "1.0.0"
-description = "GroupDocs.Translation.ApiGateway.Web"
-authors = ["OpenAPI Generator Community <team@openapitools.org>"]
-license = "NoLicense"
+description = "GroupDocs.Translation SDK"
+authors = ["GroupDocs <anton.perhunov@aspose.com>"]
+license = "Aspose EULA"
 readme = "README.md"
 repository = "https://github.com/groupdocs-translation-cloud/groupdocs-translation-cloud-python"
-keywords = ["OpenAPI", "OpenAPI-Generator", "GroupDocs.Translation.ApiGateway.Web"]
+keywords = ["OpenAPI", "OpenAPI-Generator", "GroupDocs.Translation SDK"]
 
 [tool.poetry.dependencies]
 python = "^3.7"

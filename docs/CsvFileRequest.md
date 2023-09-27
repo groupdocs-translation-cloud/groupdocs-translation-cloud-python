@@ -13,13 +13,13 @@ Name | Type | Description | Notes
 **origin** | **str** | Url or name of application using this SDK. Not required. | [optional] 
 **saving_mode** | **str** | Toggle file saving mode for storage.  Is Files by default. | [optional] 
 **format** | **str** | Input file format | [optional] [default to 'Csv']
-**out_format** | **str** | output file format | 
+**output_format** | **str** | output file format | 
 **separator** | **str** | Separator in files | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.csv_file_request import CsvFileRequest
+from groupdocs-translation-cloud.models.csv_file_request import CsvFileRequest
 
 # TODO update the JSON string below
 json = "{}"

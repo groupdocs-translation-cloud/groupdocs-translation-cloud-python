@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.status_response import StatusResponse
+from groupdocs-translation-cloud.models.status_response import StatusResponse
 
 # TODO update the JSON string below
 json = "{}"

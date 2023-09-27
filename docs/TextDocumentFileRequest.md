@@ -15,11 +15,12 @@ Name | Type | Description | Notes
 **output_format** | **str** | output file format | 
 **preserve_formatting** | **bool** | If document&#39;s formatting should be preserved, default true | [optional] [default to True]
 **origin** | **str** | for analysis only | [optional] 
+**pages** | **List[int]** | Choose pages for translation (1-based index). If not present, translate all pages | [optional] 
 
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.text_document_file_request import TextDocumentFileRequest
+from groupdocs-translation-cloud.models.text_document_file_request import TextDocumentFileRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from GroupDocs.Translation.Api.models.url_file_info import UrlFileInfo
+from groupdocs-translation-cloud.models.url_file_info import UrlFileInfo
 
 # TODO update the JSON string below
 json = "{}"
