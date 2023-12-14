@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.csv_file_request import CsvFileRequest
+from groupdocs_translation_cloud.models.csv_file_request import CsvFileRequest
 
 # TODO update the JSON string below
 json = "{}"

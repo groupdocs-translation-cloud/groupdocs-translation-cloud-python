@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.cloud_file_response import CloudFileResponse
+from groupdocs_translation_cloud.models.cloud_file_response import CloudFileResponse
 
 # TODO update the JSON string below
 json = "{}"

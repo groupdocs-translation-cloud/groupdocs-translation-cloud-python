@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "groupdocs-translation-cloud"
+name = "groupdocs_translation_cloud"
 version = "1.0.0"
 description = "GroupDocs.Translation SDK"
 authors = ["GroupDocs <anton.perhunov@aspose.com>"]

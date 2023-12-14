@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.markdown_file_request import MarkdownFileRequest
+from groupdocs_translation_cloud.models.markdown_file_request import MarkdownFileRequest
 
 # TODO update the JSON string below
 json = "{}"
