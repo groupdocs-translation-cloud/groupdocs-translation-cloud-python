@@ -3,7 +3,7 @@
 #
 # ref: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: groupdocs-translation-cloud Python package
+name: groupdocs_translation_cloud Python package
 
 on: [push, pull_request]
 

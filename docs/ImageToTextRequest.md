@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.image_to_text_request import ImageToTextRequest
+from groupdocs_translation_cloud.models.image_to_text_request import ImageToTextRequest
 
 # TODO update the JSON string below
 json = "{}"

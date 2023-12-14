@@ -133,7 +133,7 @@ pip install groupdocs-translation-cloud
 
 Then import the package:
 ```python
-import groupdocs-translation-cloud
+import groupdocs_translation_cloud
 ```
 
 ### Setuptools
@@ -147,7 +147,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import groupdocs-translation-cloud
+import groupdocs_translation_cloud
 ```
 
 ### Tests
@@ -161,13 +161,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -176,7 +176,7 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
@@ -184,18 +184,16 @@ configuration = groupdocs-translation-cloud.Configuration(
 
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    file_request = groupdocs-translation-cloud.FileRequest() # FileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.SwaggerApi(api_client)
+    is_yaml = False # bool |  (optional) (default to False)
+    serialaize_as_v2 = False # bool |  (optional) (default to False)
 
     try:
-        # Translate any supported file
-        api_response = api_instance.auto_post(file_request=file_request)
-        print("The response of TranslationApi->auto_post:\n")
-        pprint(api_response)
+        api_instance.swagger_spec_get(is_yaml=is_yaml, serialaize_as_v2=serialaize_as_v2)
     except ApiException as e:
-        print("Exception when calling TranslationApi->auto_post: %s\n" % e)
+        print("Exception when calling SwaggerApi->swagger_spec_get: %s\n" % e)
 
 ```
 
@@ -205,10 +203,12 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/translation*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SwaggerApi* | [**swagger_spec_get**](docs\SwaggerApi.md#swagger_spec_get) | **GET** /swagger/spec | 
 *TranslationApi* | [**auto_post**](docs\TranslationApi.md#auto_post) | **POST** /auto | Translate any supported file
 *TranslationApi* | [**csv_post**](docs\TranslationApi.md#csv_post) | **POST** /csv | Translate CSV and TSV files
 *TranslationApi* | [**document_post**](docs\TranslationApi.md#document_post) | **POST** /document | Translate Microsoft Word documents, rtf, txt, odt
 *TranslationApi* | [**document_request_id_get**](docs\TranslationApi.md#document_request_id_get) | **GET** /document/{requestId} | Return document translation status.  Also return URLs for downloading of translated document if translation was successful
+*TranslationApi* | [**document_trial_get**](docs\TranslationApi.md#document_trial_get) | **GET** /document/trial | Return document translation status for trial request.  Also return URLs for downloading of translated document if translation was successful
 *TranslationApi* | [**document_trial_post**](docs\TranslationApi.md#document_trial_post) | **POST** /document/trial | Trial translate Microsoft Word documents, rtf, txt, odt without conversation. Translate only first page or 1000 symbols.
 *TranslationApi* | [**hc_get**](docs\TranslationApi.md#hc_get) | **GET** /hc | Health check for all services.
 *TranslationApi* | [**html_post**](docs\TranslationApi.md#html_post) | **POST** /html | Translate HTML files
@@ -221,16 +221,20 @@ Class | Method | HTTP request | Description
 *TranslationApi* | [**pdf_post**](docs\TranslationApi.md#pdf_post) | **POST** /pdf | Translate pdf files
 *TranslationApi* | [**pdf_trial_post**](docs\TranslationApi.md#pdf_trial_post) | **POST** /pdf/trial | Trial pdf translation. Translate only first page without conversion to another format.
 *TranslationApi* | [**presentation_post**](docs\TranslationApi.md#presentation_post) | **POST** /presentation | Translate Microsoft PowerPoint presentations, odp
-*TranslationApi* | [**resx_post**](docs\TranslationApi.md#resx_post) | **POST** /resx | Translate RESX files
+*TranslationApi* | [**resx_post**](docs\TranslationApi.md#resx_post) | **POST** /resx | Translate Resx files
 *TranslationApi* | [**spreadsheet_post**](docs\TranslationApi.md#spreadsheet_post) | **POST** /spreadsheet | Translate Microsoft Excel workbooks, ods
+*TranslationApi* | [**srt_post**](docs\TranslationApi.md#srt_post) | **POST** /srt | Translate Srt files
 *TranslationApi* | [**text_post**](docs\TranslationApi.md#text_post) | **POST** /text | Translate text
 *TranslationApi* | [**text_request_id_get**](docs\TranslationApi.md#text_request_id_get) | **GET** /text/{requestId} | Return text translation status.  Also return translated text if translation was successful
+*TranslationApi* | [**text_trial_get**](docs\TranslationApi.md#text_trial_get) | **GET** /text/trial | Return text translation status for trial requests.  Also return translated text if translation was successful
 *TranslationApi* | [**text_trial_post**](docs\TranslationApi.md#text_trial_post) | **POST** /text/trial | Trial translate text. Translate only 1000 symbols.
 
 
 ## Documentation For Models
 
+ - [CloudFileRequest](docs\CloudFileRequest.md)
  - [CloudFileResponse](docs\CloudFileResponse.md)
+ - [CloudFileResponseWithAdditionalInfo](docs\CloudFileResponseWithAdditionalInfo.md)
  - [CloudHugoResponse](docs\CloudHugoResponse.md)
  - [CloudTextResponse](docs\CloudTextResponse.md)
  - [CsvFileRequest](docs\CsvFileRequest.md)
@@ -245,8 +249,8 @@ Class | Method | HTTP request | Description
  - [MarkdownFileRequest](docs\MarkdownFileRequest.md)
  - [PdfFileRequest](docs\PdfFileRequest.md)
  - [PresentationFileRequest](docs\PresentationFileRequest.md)
- - [ResxFileRequest](docs\ResxFileRequest.md)
  - [SpreadsheetFileRequest](docs\SpreadsheetFileRequest.md)
+ - [SrtFileRequest](docs\SrtFileRequest.md)
  - [StatusResponse](docs\StatusResponse.md)
  - [StringStringTuple](docs\StringStringTuple.md)
  - [TextDocumentFileRequest](docs\TextDocumentFileRequest.md)

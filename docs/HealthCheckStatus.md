@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.health_check_status import HealthCheckStatus
+from groupdocs_translation_cloud.models.health_check_status import HealthCheckStatus
 
 # TODO update the JSON string below
 json = "{}"

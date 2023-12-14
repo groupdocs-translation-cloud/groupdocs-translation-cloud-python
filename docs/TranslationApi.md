@@ -1,4 +1,4 @@
-# groupdocs-translation-cloud.TranslationApi
+# groupdocs_translation_cloud.TranslationApi
 
 All URIs are relative to *https://api.groupdocs.cloud/v2.0/translation*
 
@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**csv_post**](TranslationApi.md#csv_post) | **POST** /csv | Translate CSV and TSV files
 [**document_post**](TranslationApi.md#document_post) | **POST** /document | Translate Microsoft Word documents, rtf, txt, odt
 [**document_request_id_get**](TranslationApi.md#document_request_id_get) | **GET** /document/{requestId} | Return document translation status.  Also return URLs for downloading of translated document if translation was successful
+[**document_trial_get**](TranslationApi.md#document_trial_get) | **GET** /document/trial | Return document translation status for trial request.  Also return URLs for downloading of translated document if translation was successful
 [**document_trial_post**](TranslationApi.md#document_trial_post) | **POST** /document/trial | Trial translate Microsoft Word documents, rtf, txt, odt without conversation. Translate only first page or 1000 symbols.
 [**hc_get**](TranslationApi.md#hc_get) | **GET** /hc | Health check for all services.
 [**html_post**](TranslationApi.md#html_post) | **POST** /html | Translate HTML files
@@ -20,10 +21,12 @@ Method | HTTP request | Description
 [**pdf_post**](TranslationApi.md#pdf_post) | **POST** /pdf | Translate pdf files
 [**pdf_trial_post**](TranslationApi.md#pdf_trial_post) | **POST** /pdf/trial | Trial pdf translation. Translate only first page without conversion to another format.
 [**presentation_post**](TranslationApi.md#presentation_post) | **POST** /presentation | Translate Microsoft PowerPoint presentations, odp
-[**resx_post**](TranslationApi.md#resx_post) | **POST** /resx | Translate RESX files
+[**resx_post**](TranslationApi.md#resx_post) | **POST** /resx | Translate Resx files
 [**spreadsheet_post**](TranslationApi.md#spreadsheet_post) | **POST** /spreadsheet | Translate Microsoft Excel workbooks, ods
+[**srt_post**](TranslationApi.md#srt_post) | **POST** /srt | Translate Srt files
 [**text_post**](TranslationApi.md#text_post) | **POST** /text | Translate text
 [**text_request_id_get**](TranslationApi.md#text_request_id_get) | **GET** /text/{requestId} | Return text translation status.  Also return translated text if translation was successful
+[**text_trial_get**](TranslationApi.md#text_trial_get) | **GET** /text/trial | Return text translation status for trial requests.  Also return translated text if translation was successful
 [**text_trial_post**](TranslationApi.md#text_trial_post) | **POST** /text/trial | Trial translate text. Translate only 1000 symbols.
 
 
@@ -38,15 +41,15 @@ Translate any supported file
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.file_request import FileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.file_request import FileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -55,17 +58,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    file_request = groupdocs-translation-cloud.FileRequest() # FileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    file_request = groupdocs_translation_cloud.FileRequest() # FileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate any supported file
@@ -114,15 +117,15 @@ Translate CSV and TSV files
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.csv_file_request import CsvFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.csv_file_request import CsvFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -131,17 +134,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    csv_file_request = groupdocs-translation-cloud.CsvFileRequest() # CsvFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    csv_file_request = groupdocs_translation_cloud.CsvFileRequest() # CsvFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate CSV and TSV files
@@ -190,15 +193,15 @@ Translate Microsoft Word documents, rtf, txt, odt
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.models.text_document_file_request import TextDocumentFileRequest
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_document_file_request import TextDocumentFileRequest
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -207,17 +210,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    text_document_file_request = groupdocs-translation-cloud.TextDocumentFileRequest() # TextDocumentFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_document_file_request = groupdocs_translation_cloud.TextDocumentFileRequest() # TextDocumentFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate Microsoft Word documents, rtf, txt, odt
@@ -266,14 +269,14 @@ Return document translation status.  Also return URLs for downloading of transla
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.cloud_file_response import CloudFileResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.cloud_file_response import CloudFileResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -282,17 +285,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    request_id = 'request_id_example' # str | GUID which got from /v3/translation/document response
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    request_id = 'request_id_example' # str | GUID which got from /translation/document response
 
     try:
         # Return document translation status.  Also return URLs for downloading of translated document if translation was successful
@@ -308,7 +311,86 @@ with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request_id** | **str**| GUID which got from /v3/translation/document response | 
+ **request_id** | **str**| GUID which got from /translation/document response | 
+
+### Return type
+
+[**CloudFileResponse**](CloudFileResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**102** | Information |  -  |
+**202** | Accepted |  -  |
+**204** | No Content |  -  |
+**206** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **document_trial_get**
+> CloudFileResponse document_trial_get(request_id=request_id)
+
+Return document translation status for trial request.  Also return URLs for downloading of translated document if translation was successful
+
+### Example
+
+* OAuth Authentication (JWT):
+```python
+import time
+import os
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.cloud_file_response import CloudFileResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+# Configure OAuth2 access token for authorization: JWT
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation",
+    client_id = "YOUR_CLIENT_ID",
+    client_secret = "YOUR_CLIENT_SECRET"
+)
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    request_id = 'request_id_example' # str | GUID which got from /v3/translation/document response (optional)
+
+    try:
+        # Return document translation status for trial request.  Also return URLs for downloading of translated document if translation was successful
+        api_response = api_instance.document_trial_get(request_id=request_id)
+        print("The response of TranslationApi->document_trial_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->document_trial_get: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_id** | **str**| GUID which got from /v3/translation/document response | [optional] 
 
 ### Return type
 
@@ -341,15 +423,15 @@ Trial translate Microsoft Word documents, rtf, txt, odt without conversation. Tr
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.models.text_document_file_request import TextDocumentFileRequest
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_document_file_request import TextDocumentFileRequest
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -358,17 +440,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    text_document_file_request = groupdocs-translation-cloud.TextDocumentFileRequest() # TextDocumentFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_document_file_request = groupdocs_translation_cloud.TextDocumentFileRequest() # TextDocumentFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Trial translate Microsoft Word documents, rtf, txt, odt without conversation. Translate only first page or 1000 symbols.
@@ -417,14 +499,14 @@ Health check for all services.
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.health_check_status import HealthCheckStatus
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.health_check_status import HealthCheckStatus
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -433,16 +515,16 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
 
     try:
         # Health check for all services.
@@ -488,15 +570,15 @@ Translate HTML files
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.html_file_request import HtmlFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.html_file_request import HtmlFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -505,17 +587,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    html_file_request = groupdocs-translation-cloud.HtmlFileRequest() # HtmlFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    html_file_request = groupdocs_translation_cloud.HtmlFileRequest() # HtmlFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate HTML files
@@ -564,14 +646,14 @@ Get hugo syntax structure from markdown file
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.cloud_hugo_response import CloudHugoResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.cloud_hugo_response import CloudHugoResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -580,16 +662,16 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
     id = 'id_example' # str | id from PostHugo> (optional)
 
     try:
@@ -639,15 +721,15 @@ Run hugo syntax structure analyzing from markdown file
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.hugo_request import HugoRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.hugo_request import HugoRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -656,17 +738,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    hugo_request = groupdocs-translation-cloud.HugoRequest() # HugoRequest |  (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    hugo_request = groupdocs_translation_cloud.HugoRequest() # HugoRequest |  (optional)
 
     try:
         # Run hugo syntax structure analyzing from markdown file
@@ -715,15 +797,15 @@ Translate image or scanned pdf and return file
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.image_to_file_request import ImageToFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.image_to_file_request import ImageToFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -732,17 +814,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    image_to_file_request = groupdocs-translation-cloud.ImageToFileRequest() # ImageToFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    image_to_file_request = groupdocs_translation_cloud.ImageToFileRequest() # ImageToFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate image or scanned pdf and return file
@@ -791,15 +873,15 @@ Translate text on image or scanned pdf
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.image_to_text_request import ImageToTextRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.image_to_text_request import ImageToTextRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -808,17 +890,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    image_to_text_request = groupdocs-translation-cloud.ImageToTextRequest() # ImageToTextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    image_to_text_request = groupdocs_translation_cloud.ImageToTextRequest() # ImageToTextRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate text on image or scanned pdf
@@ -867,14 +949,14 @@ Return list of available language pairs
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.language_pair_data import LanguagePairData
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.language_pair_data import LanguagePairData
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -883,16 +965,16 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
 
     try:
         # Return list of available language pairs
@@ -938,15 +1020,15 @@ Translate Markdown files
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.markdown_file_request import MarkdownFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.markdown_file_request import MarkdownFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -955,17 +1037,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    markdown_file_request = groupdocs-translation-cloud.MarkdownFileRequest() # MarkdownFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    markdown_file_request = groupdocs_translation_cloud.MarkdownFileRequest() # MarkdownFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate Markdown files
@@ -1014,15 +1096,15 @@ Translate pdf files
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.pdf_file_request import PdfFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.pdf_file_request import PdfFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1031,17 +1113,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    pdf_file_request = groupdocs-translation-cloud.PdfFileRequest() # PdfFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    pdf_file_request = groupdocs_translation_cloud.PdfFileRequest() # PdfFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate pdf files
@@ -1090,15 +1172,15 @@ Trial pdf translation. Translate only first page without conversion to another f
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.pdf_file_request import PdfFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.pdf_file_request import PdfFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1107,17 +1189,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    pdf_file_request = groupdocs-translation-cloud.PdfFileRequest() # PdfFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    pdf_file_request = groupdocs_translation_cloud.PdfFileRequest() # PdfFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Trial pdf translation. Translate only first page without conversion to another format.
@@ -1166,15 +1248,15 @@ Translate Microsoft PowerPoint presentations, odp
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.presentation_file_request import PresentationFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.presentation_file_request import PresentationFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1183,17 +1265,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    presentation_file_request = groupdocs-translation-cloud.PresentationFileRequest() # PresentationFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    presentation_file_request = groupdocs_translation_cloud.PresentationFileRequest() # PresentationFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate Microsoft PowerPoint presentations, odp
@@ -1232,9 +1314,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **resx_post**
-> StatusResponse resx_post(resx_file_request=resx_file_request)
+> StatusResponse resx_post(srt_file_request=srt_file_request)
 
-Translate RESX files
+Translate Resx files
 
 ### Example
 
@@ -1242,15 +1324,15 @@ Translate RESX files
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.resx_file_request import ResxFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.srt_file_request import SrtFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1259,21 +1341,21 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    resx_file_request = groupdocs-translation-cloud.ResxFileRequest() # ResxFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    srt_file_request = groupdocs_translation_cloud.SrtFileRequest() # SrtFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
-        # Translate RESX files
-        api_response = api_instance.resx_post(resx_file_request=resx_file_request)
+        # Translate Resx files
+        api_response = api_instance.resx_post(srt_file_request=srt_file_request)
         print("The response of TranslationApi->resx_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -1285,7 +1367,7 @@ with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resx_file_request** | [**ResxFileRequest**](ResxFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+ **srt_file_request** | [**SrtFileRequest**](SrtFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
 
 ### Return type
 
@@ -1318,15 +1400,15 @@ Translate Microsoft Excel workbooks, ods
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.spreadsheet_file_request import SpreadsheetFileRequest
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.spreadsheet_file_request import SpreadsheetFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1335,17 +1417,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    spreadsheet_file_request = groupdocs-translation-cloud.SpreadsheetFileRequest() # SpreadsheetFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    spreadsheet_file_request = groupdocs_translation_cloud.SpreadsheetFileRequest() # SpreadsheetFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate Microsoft Excel workbooks, ods
@@ -1383,6 +1465,82 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **srt_post**
+> StatusResponse srt_post(srt_file_request=srt_file_request)
+
+Translate Srt files
+
+### Example
+
+* OAuth Authentication (JWT):
+```python
+import time
+import os
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.srt_file_request import SrtFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+# Configure OAuth2 access token for authorization: JWT
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation",
+    client_id = "YOUR_CLIENT_ID",
+    client_secret = "YOUR_CLIENT_SECRET"
+)
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    srt_file_request = groupdocs_translation_cloud.SrtFileRequest() # SrtFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Translate Srt files
+        api_response = api_instance.srt_post(srt_file_request=srt_file_request)
+        print("The response of TranslationApi->srt_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->srt_post: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **srt_file_request** | [**SrtFileRequest**](SrtFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **text_post**
 > StatusResponse text_post(text_request=text_request)
 
@@ -1394,15 +1552,15 @@ Translate text
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.models.text_request import TextRequest
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_request import TextRequest
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1411,17 +1569,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    text_request = groupdocs-translation-cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_request = groupdocs_translation_cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Translate text
@@ -1470,14 +1628,14 @@ Return text translation status.  Also return translated text if translation was 
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.cloud_text_response import CloudTextResponse
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.cloud_text_response import CloudTextResponse
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1486,16 +1644,16 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
     request_id = 'request_id_example' # str | GUID which got from /v3/translation/text response
 
     try:
@@ -1531,6 +1689,82 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |
+**102** | Information |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **text_trial_get**
+> CloudTextResponse text_trial_get(request_id=request_id)
+
+Return text translation status for trial requests.  Also return translated text if translation was successful
+
+### Example
+
+* OAuth Authentication (JWT):
+```python
+import time
+import os
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.cloud_text_response import CloudTextResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+# Configure OAuth2 access token for authorization: JWT
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation",
+    client_id = "YOUR_CLIENT_ID",
+    client_secret = "YOUR_CLIENT_SECRET"
+)
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    request_id = 'request_id_example' # str | GUID which got from /v3/translation/text response (optional)
+
+    try:
+        # Return text translation status for trial requests.  Also return translated text if translation was successful
+        api_response = api_instance.text_trial_get(request_id=request_id)
+        print("The response of TranslationApi->text_trial_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->text_trial_get: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request_id** | **str**| GUID which got from /v3/translation/text response | [optional] 
+
+### Return type
+
+[**CloudTextResponse**](CloudTextResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1545,15 +1779,15 @@ Trial translate text. Translate only 1000 symbols.
 ```python
 import time
 import os
-import groupdocs-translation-cloud
-from groupdocs-translation-cloud.models.status_response import StatusResponse
-from groupdocs-translation-cloud.models.text_request import TextRequest
-from groupdocs-translation-cloud.rest import ApiException
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_request import TextRequest
+from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
 # See configuration.py for a list of all supported configuration parameters.
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation"
 )
 
@@ -1562,17 +1796,17 @@ configuration = groupdocs-translation-cloud.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 # Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs-translation-cloud.Configuration(
+configuration = groupdocs_translation_cloud.Configuration(
     host = "https://api.groupdocs.cloud/v2.0/translation",
     client_id = "YOUR_CLIENT_ID",
     client_secret = "YOUR_CLIENT_SECRET"
 )
 
 # Enter a context with an instance of the API client
-with groupdocs-translation-cloud.ApiClient(configuration) as api_client:
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = groupdocs-translation-cloud.TranslationApi(api_client)
-    text_request = groupdocs-translation-cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_request = groupdocs_translation_cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
 
     try:
         # Trial translate text. Translate only 1000 symbols.

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.html_file_request import HtmlFileRequest
+from groupdocs_translation_cloud.models.html_file_request import HtmlFileRequest
 
 # TODO update the JSON string below
 json = "{}"

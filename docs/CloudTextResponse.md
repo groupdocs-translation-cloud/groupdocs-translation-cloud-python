@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.cloud_text_response import CloudTextResponse
+from groupdocs_translation_cloud.models.cloud_text_response import CloudTextResponse
 
 # TODO update the JSON string below
 json = "{}"
