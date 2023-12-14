@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.hugo_request import HugoRequest
+from groupdocs_translation_cloud.models.hugo_request import HugoRequest
 
 # TODO update the JSON string below
 json = "{}"

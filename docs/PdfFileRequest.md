@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.pdf_file_request import PdfFileRequest
+from groupdocs_translation_cloud.models.pdf_file_request import PdfFileRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from groupdocs-translation-cloud.models.image_to_file_request import ImageToFileRequest
+from groupdocs_translation_cloud.models.image_to_file_request import ImageToFileRequest
 
 # TODO update the JSON string below
 json = "{}"
