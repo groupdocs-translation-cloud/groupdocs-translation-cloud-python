@@ -4,108 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aba3038-1e31-493d-bfb3-8e96aa3187bf" name="Changes" comment="New SDK 23.8">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/python.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/python.iml" afterDir="false" />
+    <list default="true" id="8aba3038-1e31-493d-bfb3-8e96aa3187bf" name="Changes" comment="Update version to 23.12.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.openapi-generator/FILES" beforeDir="false" afterPath="$PROJECT_DIR$/.openapi-generator/FILES" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/AutoPostRequest.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CloudFileResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudFileResponse.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CloudHugoResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudHugoResponse.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CloudTextResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudTextResponse.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CsvFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CsvFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/FileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HealthCheckStatus.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HealthCheckStatus.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HtmlFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HtmlFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/HugoRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HugoRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ImageToFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ImageToFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ImageToTextRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ImageToTextRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LanguagePairData.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LanguagePairData.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/MarkdownFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MarkdownFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/OcrFileRequest.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PdfFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PdfFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PresentationFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PresentationFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ResxFileRequest.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/SpreadsheetFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SpreadsheetFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/StatusResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/StatusResponse.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/StringStringTuple.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/StringStringTuple.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TextDocumentFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TextDocumentFileRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TextRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TextRequest.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TranslationApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TranslationApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/TransportApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/UrlFileInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UrlFileInfo.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/WorksheetData.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WorksheetData.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/api/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/api/translation_api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/api/transport_api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/api_client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/api_response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/configuration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/exceptions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/auto_post_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/cloud_file_response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/cloud_hugo_response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/cloud_text_response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/csv_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/health_check_status.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/html_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/http_status_code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/hugo_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/image_to_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/image_to_text_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/language_pair_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/markdown_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/ocr_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/pdf_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/presentation_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/resx_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/spreadsheet_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/status_response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/string_string_tuple.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/text_document_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/text_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/url_file_info.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/models/worksheet_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/groupdocs-translation-cloud/rest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_auto_post_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_cloud_file_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_cloud_file_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_cloud_hugo_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_cloud_hugo_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_cloud_text_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_cloud_text_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_csv_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_csv_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_health_check_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_health_check_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_html_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_html_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_http_status_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_http_status_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_hugo_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_hugo_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_image_to_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_image_to_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_image_to_text_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_image_to_text_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_language_pair_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_language_pair_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_markdown_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_markdown_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_ocr_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_pdf_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_pdf_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_presentation_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_presentation_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_resx_file_request.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_spreadsheet_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_spreadsheet_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_status_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_status_response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_string_string_tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_string_string_tuple.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_text_document_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_text_document_file_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_text_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_text_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_translation_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_translation_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_transport_api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_url_file_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_url_file_info.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_worksheet_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_worksheet_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +99,7 @@
       <workItem from="1692205474304" duration="728000" />
       <workItem from="1692623320240" duration="73000" />
       <workItem from="1692623412809" duration="41000" />
-      <workItem from="1702468607653" duration="4136000" />
+      <workItem from="1702468607653" duration="4921000" />
     </task>
     <task id="LOCAL-00001" summary="New SDK 23.8">
       <option name="closed" value="true" />
@@ -209,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692205595755</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update version to 23.12.0">
+      <option name="closed" value="true" />
+      <created>1702580594265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702580594265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New SDK 23.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="New SDK 23.8" />
+    <MESSAGE value="Update version to 23.12.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update version to 23.12.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
