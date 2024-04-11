@@ -59,3 +59,4 @@ from groupdocs_translation_cloud.models.text_document_file_request import TextDo
 from groupdocs_translation_cloud.models.text_request import TextRequest
 from groupdocs_translation_cloud.models.url_file_info import UrlFileInfo
 from groupdocs_translation_cloud.models.worksheet_data import WorksheetData
+from groupdocs_translation_cloud.models.api_enums import Format

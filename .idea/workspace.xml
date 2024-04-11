@@ -5,7 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aba3038-1e31-493d-bfb3-8e96aa3187bf" name="Changes" comment="Update version to 23.12.0">
+      <change afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/api_enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/python.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/python.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CloudFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CloudFileResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudFileResponse.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CloudFileResponseWithAdditionalInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudFileResponseWithAdditionalInfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CloudHugoResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudHugoResponse.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CloudTextResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CloudTextResponse.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/CsvFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/CsvFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FileApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FileApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/HealthCheckStatus.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HealthCheckStatus.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/HtmlFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HtmlFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/HttpStatusCode.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HttpStatusCode.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/HugoRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/HugoRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ImageToFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ImageToFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ImageToTextRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ImageToTextRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LanguagePairData.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LanguagePairData.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/MarkdownFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/MarkdownFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PdfFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PdfFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PresentationFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PresentationFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SpreadsheetFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SpreadsheetFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SrtFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SrtFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/StatusResponse.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/StatusResponse.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/StringStringTuple.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/StringStringTuple.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SwaggerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SwaggerApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TextDocumentFileRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TextDocumentFileRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TextRequest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TextRequest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TranslationApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TranslationApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UrlFileInfo.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UrlFileInfo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WorksheetData.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/WorksheetData.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/git_push.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/api/file_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/api/file_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/api/swagger_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/api/swagger_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/api/translation_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/api/translation_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/api_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/api_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/api_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/api_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_file_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_file_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_file_response_with_additional_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_file_response_with_additional_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_hugo_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_hugo_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_text_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/cloud_text_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/csv_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/csv_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/health_check_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/health_check_status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/html_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/html_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/http_status_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/http_status_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/hugo_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/hugo_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/image_to_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/image_to_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/image_to_text_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/image_to_text_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/language_pair_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/language_pair_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/markdown_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/markdown_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/pdf_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/pdf_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/presentation_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/presentation_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/spreadsheet_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/spreadsheet_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/srt_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/srt_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/status_response.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/status_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/string_string_tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/string_string_tuple.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/text_document_file_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/text_document_file_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/text_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/text_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/url_file_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/url_file_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/models/worksheet_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/models/worksheet_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupdocs_translation_cloud/rest.py" beforeDir="false" afterPath="$PROJECT_DIR$/groupdocs_translation_cloud/rest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test-requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tox.ini" beforeDir="false" afterPath="$PROJECT_DIR$/tox.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +119,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python tests.Python tests for test_translation_api.TestTranslationApi.test_text_post.executor": "Run",
-    "Python.test_api.executor": "Debug",
+    "Python tests.Doctests in file_api.executor": "Debug",
+    "Python tests.Python tests for test_api.TestTranslationApi.executor": "Run",
+    "Python tests.Python tests for test_api.TestTranslationApi.testPdfTranslation.executor": "Debug",
+    "Python tests.Python tests for test_api.TestTranslationApi.testSrtTranslation.executor": "Debug",
+    "Python tests.Python tests for test_api.TestTranslationApi.testWordTranslation.executor": "Run",
+    "Python tests.Python tests for test_translation_api.TestTranslationApi.test_text_post.executor": "Debug",
+    "Python.configuration.executor": "Debug",
+    "Python.rest.executor": "Run",
+    "Python.test_api.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "new__sdk",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/Work/openapi-generator/GroupDocs.Translation/python",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,7 +142,71 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.Python tests for test_api.TestTranslationApi.testSrtTranslation">
+    <configuration name="Python tests for test_api.TestTranslationApi" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestTranslationApi&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_api.TestTranslationApi.testPdfTranslation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestTranslationApi.testPdfTranslation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_api.TestTranslationApi.testSrtTranslation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestTranslationApi.testSrtTranslation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_api.TestTranslationApi.testWordTranslation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_api.TestTranslationApi.testWordTranslation&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_translation_api.TestTranslationApi.test_text_post" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python" />
       <option name="ENV_FILES" value="" />
@@ -76,6 +225,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_api.TestTranslationApi.testSrtTranslation" />
+        <item itemvalue="Python tests.Python tests for test_api.TestTranslationApi" />
+        <item itemvalue="Python tests.Python tests for test_api.TestTranslationApi.testWordTranslation" />
+        <item itemvalue="Python tests.Python tests for test_api.TestTranslationApi.testPdfTranslation" />
         <item itemvalue="Python tests.Python tests for test_translation_api.TestTranslationApi.test_text_post" />
       </list>
     </recent_temporary>
@@ -83,7 +236,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7a29c1521ef0-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.298" />
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -100,6 +253,9 @@
       <workItem from="1692623320240" duration="73000" />
       <workItem from="1692623412809" duration="41000" />
       <workItem from="1702468607653" duration="4921000" />
+      <workItem from="1712672552783" duration="5466000" />
+      <workItem from="1712765384884" duration="469000" />
+      <workItem from="1712765904049" duration="15614000" />
     </task>
     <task id="LOCAL-00001" summary="New SDK 23.8">
       <option name="closed" value="true" />
@@ -137,7 +293,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New SDK 23.8" />
     <MESSAGE value="Update version to 23.12.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update version to 23.12.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -153,15 +309,23 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test_text_document_file_request.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test/test_api.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="3" />
+          <line>132</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/python$.coverage" NAME=" Coverage Results" MODIFIED="1702471809766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/python$test_api.coverage" NAME="test_api Coverage Results" MODIFIED="1702472031065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/python$Doctests_in_file_api.coverage" NAME="Doctests in file_api Coverage Results" MODIFIED="1712772625283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/groupdocs_translation_cloud/api" />
+    <SUITE FILE_PATH="coverage/python$rest.coverage" NAME="rest Coverage Results" MODIFIED="1712679672440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/groupdocs_translation_cloud" />
+    <SUITE FILE_PATH="coverage/python$test_api.coverage" NAME="test_api Coverage Results" MODIFIED="1712779192431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/python$.coverage" NAME=" Coverage Results" MODIFIED="1712856059225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/python$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1712680818033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/groupdocs_translation_cloud" />
   </component>
 </project>

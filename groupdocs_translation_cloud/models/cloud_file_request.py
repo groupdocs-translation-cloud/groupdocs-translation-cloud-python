@@ -40,12 +40,12 @@ class CloudFileRequest(BaseModel):
     ranges: Optional[Dict[str, WorksheetData]] = Field(None, description="Dictionary of ranges in Excel workbooks")
     short_code_dict: Optional[Dict[str, conlist(StrictStr)]] = Field(None, alias="shortCodeDict", description="Dictiory of short code names and parameters names to translate")
     front_matter_list: Optional[conlist(conlist(StrictStr))] = Field(None, alias="frontMatterList", description="Dictionary where key is zero-based front matter index and value is list of lists of front matter paths")
-    original_name: Optional[StrictStr] = Field(None, alias="originalName", description="Original name of file")
+    original_file_name: Optional[StrictStr] = Field(None, alias="originalFileName", description="Original name of file")
     separator: Optional[StrictStr] = Field(None, description="Separator in files")
     is_paid: Optional[StrictBool] = Field(None, alias="isPaid", description="Set true if paid user")
     saving_mode: Optional[StrictStr] = Field(None, alias="savingMode", description="Toggle files saving mode")
     details: Optional[Dict[str, StrictStr]] = Field(None, description="Details of the requests. Using for e2e tracking")
-    __properties = ["format", "outFormat", "requestId", "ids", "url", "size", "masters", "formatting", "origin", "elements", "ranges", "shortCodeDict", "frontMatterList", "originalName", "separator", "isPaid", "savingMode", "details"]
+    __properties = ["format", "outFormat", "requestId", "ids", "url", "size", "masters", "formatting", "origin", "elements", "ranges", "shortCodeDict", "frontMatterList", "originalFileName", "separator", "isPaid", "savingMode", "details"]
 
     @validator('saving_mode')
     def saving_mode_validate_enum(cls, value):
@@ -138,10 +138,10 @@ class CloudFileRequest(BaseModel):
         if self.front_matter_list is None and "front_matter_list" in self.__fields_set__:
             _dict['frontMatterList'] = None
 
-        # set to None if original_name (nullable) is None
+        # set to None if original_file_name (nullable) is None
         # and __fields_set__ contains the field
-        if self.original_name is None and "original_name" in self.__fields_set__:
-            _dict['originalName'] = None
+        if self.original_file_name is None and "original_file_name" in self.__fields_set__:
+            _dict['originalFileName'] = None
 
         # set to None if separator (nullable) is None
         # and __fields_set__ contains the field
@@ -183,7 +183,7 @@ class CloudFileRequest(BaseModel):
             else None,
             "short_code_dict": obj.get("shortCodeDict"),
             "front_matter_list": obj.get("frontMatterList"),
-            "original_name": obj.get("originalName"),
+            "original_file_name": obj.get("originalFileName"),
             "separator": obj.get("separator"),
             "is_paid": obj.get("isPaid"),
             "saving_mode": obj.get("savingMode"),

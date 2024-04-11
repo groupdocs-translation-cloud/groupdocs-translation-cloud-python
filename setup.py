@@ -23,7 +23,7 @@ from os import path
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "groupdocs-translation-cloud"
-VERSION = "24.3.0"
+VERSION = "24.4.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3",
