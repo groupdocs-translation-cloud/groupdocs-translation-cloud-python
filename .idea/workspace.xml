@@ -117,31 +117,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Doctests in file_api.executor": "Debug",
-    "Python tests.Python tests for test_api.TestTranslationApi.executor": "Run",
-    "Python tests.Python tests for test_api.TestTranslationApi.testPdfTranslation.executor": "Debug",
-    "Python tests.Python tests for test_api.TestTranslationApi.testSrtTranslation.executor": "Debug",
-    "Python tests.Python tests for test_api.TestTranslationApi.testWordTranslation.executor": "Run",
-    "Python tests.Python tests for test_translation_api.TestTranslationApi.test_text_post.executor": "Debug",
-    "Python.configuration.executor": "Debug",
-    "Python.rest.executor": "Run",
-    "Python.test_api.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Work/openapi-generator/GroupDocs.Translation/python",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Doctests in file_api.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.Python tests for test_api.TestTranslationApi.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_api.TestTranslationApi.testPdfTranslation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.Python tests for test_api.TestTranslationApi.testSrtTranslation.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.Python tests for test_api.TestTranslationApi.testWordTranslation.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_translation_api.TestTranslationApi.test_text_post.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.configuration.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.rest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_api.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Work/openapi-generator/GroupDocs.Translation/python&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python tests.Python tests for test_api.TestTranslationApi.testSrtTranslation">
     <configuration name="Python tests for test_api.TestTranslationApi" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python" />
