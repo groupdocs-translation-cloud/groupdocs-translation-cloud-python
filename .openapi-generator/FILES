@@ -11,6 +11,7 @@ docs/CloudTextResponse.md
 docs/CsvFileRequest.md
 docs/FileApi.md
 docs/FileRequest.md
+docs/HealthCheckEntity.md
 docs/HealthCheckStatus.md
 docs/HtmlFileRequest.md
 docs/HttpStatusCode.md
@@ -49,6 +50,7 @@ groupdocs_translation_cloud/models/cloud_hugo_response.py
 groupdocs_translation_cloud/models/cloud_text_response.py
 groupdocs_translation_cloud/models/csv_file_request.py
 groupdocs_translation_cloud/models/file_request.py
+groupdocs_translation_cloud/models/health_check_entity.py
 groupdocs_translation_cloud/models/health_check_status.py
 groupdocs_translation_cloud/models/html_file_request.py
 groupdocs_translation_cloud/models/http_status_code.py
@@ -74,4 +76,6 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
+test/test_health_check_entity.py
+test/test_translation_api.py
 tox.ini

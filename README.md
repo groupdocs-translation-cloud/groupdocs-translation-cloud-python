@@ -15,7 +15,7 @@ It is easy to get started with GroupDocs.Translation Cloud and there is nothing 
 ## Cloud Document Translation Features
 
 - Translation of Microsoft Word®, Microsoft Excel®, and Microsoft PowerPoint® documents
-- [46 languages and 128 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
+- [46 languages and 140 languages pairs support](https://docs.groupdocs.cloud/translation/supported-languages/)
 - Translation of tables, headers, footers, footnotes/endnotes, image captions in Word documents and ODT files
 - Translation of cells, charts, tables, pivot tables in Excel documents and ODS files
 - Translation of text frames, tables, headers, footers, charts, comments in PowerPoint presentations and ODP files
@@ -106,10 +106,16 @@ Please visit [Supported Formats](https://docs.groupdocs.cloud/translation/suppor
 - **de-zh / zh-de** — to translate from German to Chinese or from Chinese to German
 - **de-es / es-de** — to translate from German to Spanish or from Spanish to German
 - **de-ms / ms-de** — to translate from German to Malay or from Malay to German
+- **de-uk / uk-de** — to translate from German to Ukrainian or from Ukrainian to German
 - **it-es / es-it** — to translate from Italian to Spanish or from Spanish to Italian
+- **it-ar / ar-it** — to translate from Italian to Arabic or from Arabic to Italian
+- **it-uk / uk-it** — to translate from Italian to Ukrainian or from Ukrainian to Italian
+- **it-ms / ms-it** — to translate from Italian to Malay or from Malay to Italian
 - **sv-zh / zh-sv** — to translate from Swedish to Chinese or from Chinese to Swedish
 - **ar-es / es-ar** — to translate from Arabic to Spanish or from Spaish to Arabic
 - **ar-tr / tr-ar** — to translate from Arabic to Turkish or from Turkish to Arabic 
+- **ar-pl / pl-ar** — to translate from Arabic to Polish or from Polish to Arabic 
+- **ru-es / es-ru** — to translate from Russian to Spanish or from Spaish to Russian
 
 ## JSON Request Details
 

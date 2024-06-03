@@ -1,3 +1,4 @@
+import os
 import time
 import unittest
 
@@ -9,8 +10,8 @@ from groupdocs_translation_cloud.models.api_enums import SavingMode, Format
 
 api = groupdocs_translation_cloud.api.TranslationApi()
 file_api = groupdocs_translation_cloud.api.FileApi()
-api.api_client.configuration.client_id = "your-id"
-api.api_client.configuration.client_secret = "your-secret"
+api.api_client.configuration.client_id = os.getenv('clientId')
+api.api_client.configuration.client_secret = os.getenv('clientSecret')
 
 
 # Get File Translation
@@ -136,7 +137,7 @@ class TestTranslationApi(unittest.TestCase):
 
     # Markdown
     def testMarkdownTranslation(self):
-        url = file_api.file_upload_post(file="../test_data/TestMarkdown.md", format=Format.Md)
+        url = file_api.file_upload_post(file="../test_data/TestMd.md", format=Format.Md)
         md_request = MarkdownFileRequest(source_language="en"
                                          , target_languages=["ru"]
                                          , url=url
@@ -148,11 +149,13 @@ class TestTranslationApi(unittest.TestCase):
 
     # Image to File
     def testImageToFileTranslation(self):
-        url = file_api.file_upload_post(file="../test_data/TestImage.png", format='Png')
+        url = file_api.file_upload_post(file="../test_data/image-based-pdf-sample.pdf", format='pdf')
         imgfile_request = ImageToFileRequest(source_language="en"
                                              , target_languages=["ru"]
+                                             , format=Format.Pdf
                                              , url=url
-                                             , output_format="png")
+                                             , output_format="Pdf"
+                                             , ocrformat="Pdf")
         response = api.image_to_file_post(imgfile_request)
         if response.status == 202:
             print('Image file translation started')
@@ -160,9 +163,10 @@ class TestTranslationApi(unittest.TestCase):
 
     # Image to Text
     def testImageToTextTranslation(self):
-        url = file_api.file_upload_post(file="../test_data/TestImage.png", format='Png')
+        url = file_api.file_upload_post(file="../test_data/test-ocr-text.jpg", format='jpg')
         imgtxt_request = ImageToTextRequest(source_language="en"
                                             , target_languages=["ru"]
+                                            , format="Jpg"
                                             , url=url)
         response = api.image_to_text_post(imgtxt_request)
         if response.status == 202:

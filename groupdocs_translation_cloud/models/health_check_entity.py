@@ -19,16 +19,17 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
-from pydantic import BaseModel, conlist
-from groupdocs_translation_cloud.models.health_check_entity import HealthCheckEntity
+from typing import Optional
+from pydantic import BaseModel, Field, StrictBool, StrictStr
 
-class HealthCheckStatus(BaseModel):
+class HealthCheckEntity(BaseModel):
     """
-    HealthCheckStatus
+    HealthCheckEntity
     """
-    items: Optional[conlist(HealthCheckEntity)] = None
-    __properties = ["items"]
+    name: Optional[StrictStr] = None
+    is_healthy: Optional[StrictBool] = Field(None, alias="isHealthy")
+    message: Optional[StrictStr] = None
+    __properties = ["name", "isHealthy", "message"]
 
     class Config:
         """Pydantic configuration"""
@@ -44,8 +45,8 @@ class HealthCheckStatus(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> HealthCheckStatus:
-        """Create an instance of HealthCheckStatus from a JSON string"""
+    def from_json(cls, json_str: str) -> HealthCheckEntity:
+        """Create an instance of HealthCheckEntity from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -54,31 +55,31 @@ class HealthCheckStatus(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of each item in items (list)
-        _items = []
-        if self.items:
-            for _item in self.items:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['items'] = _items
-        # set to None if items (nullable) is None
+        # set to None if name (nullable) is None
         # and __fields_set__ contains the field
-        if self.items is None and "items" in self.__fields_set__:
-            _dict['items'] = None
+        if self.name is None and "name" in self.__fields_set__:
+            _dict['name'] = None
+
+        # set to None if message (nullable) is None
+        # and __fields_set__ contains the field
+        if self.message is None and "message" in self.__fields_set__:
+            _dict['message'] = None
 
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> HealthCheckStatus:
-        """Create an instance of HealthCheckStatus from a dict"""
+    def from_dict(cls, obj: dict) -> HealthCheckEntity:
+        """Create an instance of HealthCheckEntity from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return HealthCheckStatus.parse_obj(obj)
+            return HealthCheckEntity.parse_obj(obj)
 
-        _obj = HealthCheckStatus.parse_obj({
-            "items": [HealthCheckEntity.from_dict(_item) for _item in obj.get("items")] if obj.get("items") is not None else None
+        _obj = HealthCheckEntity.parse_obj({
+            "name": obj.get("name"),
+            "is_healthy": obj.get("isHealthy"),
+            "message": obj.get("message")
         })
         return _obj
 

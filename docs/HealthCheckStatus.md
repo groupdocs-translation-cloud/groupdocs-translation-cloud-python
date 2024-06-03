@@ -4,8 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kafka_delivery_status** | **str** |  | [optional] 
-**cloud_status** | **str** |  | [optional] 
+**items** | [**List[HealthCheckEntity]**](HealthCheckEntity.md) |  | [optional] 
 
 ## Example
 

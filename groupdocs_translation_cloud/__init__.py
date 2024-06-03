@@ -41,6 +41,7 @@ from groupdocs_translation_cloud.models.cloud_hugo_response import CloudHugoResp
 from groupdocs_translation_cloud.models.cloud_text_response import CloudTextResponse
 from groupdocs_translation_cloud.models.csv_file_request import CsvFileRequest
 from groupdocs_translation_cloud.models.file_request import FileRequest
+from groupdocs_translation_cloud.models.health_check_entity import HealthCheckEntity
 from groupdocs_translation_cloud.models.health_check_status import HealthCheckStatus
 from groupdocs_translation_cloud.models.html_file_request import HtmlFileRequest
 from groupdocs_translation_cloud.models.http_status_code import HttpStatusCode
@@ -59,4 +60,3 @@ from groupdocs_translation_cloud.models.text_document_file_request import TextDo
 from groupdocs_translation_cloud.models.text_request import TextRequest
 from groupdocs_translation_cloud.models.url_file_info import UrlFileInfo
 from groupdocs_translation_cloud.models.worksheet_data import WorksheetData
-from groupdocs_translation_cloud.models.api_enums import Format
