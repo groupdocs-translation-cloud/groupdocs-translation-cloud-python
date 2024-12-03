@@ -15,9 +15,8 @@ Method | HTTP request | Description
 ### Example
 
 * OAuth Authentication (JWT):
+
 ```python
-import time
-import os
 import groupdocs_translation_cloud
 from groupdocs_translation_cloud.rest import ApiException
 from pprint import pprint
@@ -32,12 +31,8 @@ configuration = groupdocs_translation_cloud.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
-# Configure OAuth2 access token for authorization: JWT
-configuration = groupdocs_translation_cloud.Configuration(
-    host = "https://api.groupdocs.cloud/v2.0/translation",
-    client_id = "YOUR_CLIENT_ID",
-    client_secret = "YOUR_CLIENT_SECRET"
-)
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
 with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
@@ -55,7 +50,9 @@ with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
 ```
 
 
+
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -76,6 +73,7 @@ Name | Type | Description  | Notes
  - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Success |  -  |

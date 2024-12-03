@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
@@ -17,12 +18,12 @@ json = "{}"
 # create an instance of UrlFileInfo from a JSON string
 url_file_info_instance = UrlFileInfo.from_json(json)
 # print the JSON string representation of the object
-print UrlFileInfo.to_json()
+print(UrlFileInfo.to_json())
 
 # convert the object into a dict
 url_file_info_dict = url_file_info_instance.to_dict()
 # create an instance of UrlFileInfo from a dict
-url_file_info_form_dict = url_file_info.from_dict(url_file_info_dict)
+url_file_info_from_dict = UrlFileInfo.from_dict(url_file_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

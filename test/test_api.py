@@ -10,8 +10,10 @@ from groupdocs_translation_cloud.models.api_enums import SavingMode, Format
 
 api = groupdocs_translation_cloud.api.TranslationApi()
 file_api = groupdocs_translation_cloud.api.FileApi()
-api.api_client.configuration.client_id = os.getenv('clientId')
-api.api_client.configuration.client_secret = os.getenv('clientSecret')
+api.api_client.configuration.client_id = os.getenv('GDT_ClientId')
+api.api_client.configuration.client_secret = os.getenv('GDT_ClientSecret')
+file_api.api_client.configuration.client_id = os.getenv('GDT_ClientId')
+file_api.api_client.configuration.client_secret = os.getenv('GDT_ClientSecret')
 
 
 # Get File Translation

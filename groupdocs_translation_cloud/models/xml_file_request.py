@@ -18,16 +18,15 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr, field_validator
 from typing import Any, ClassVar, Dict, List, Optional
 from typing_extensions import Annotated
-from groupdocs_translation_cloud.models.worksheet_data import WorksheetData
 from typing import Optional, Set
 from typing_extensions import Self
 
-class SpreadsheetFileRequest(BaseModel):
+class XmlFileRequest(BaseModel):
     """
-    Request for spreadsheet files, like xls, xlsx, xlsm, ods
+    XmlFileRequest
     """ # noqa: E501
     source_language: Annotated[str, Field(min_length=1, strict=True)] = Field(description="Language of original file", alias="sourceLanguage")
     target_languages: List[StrictStr] = Field(description="List of target languages", alias="targetLanguages")
@@ -35,11 +34,9 @@ class SpreadsheetFileRequest(BaseModel):
     url: Optional[StrictStr] = Field(default=None, description="Link to file for translation. Ignore, if \"file\" property not null")
     origin: Optional[StrictStr] = Field(default=None, description="Url or name of application using this SDK. Not required.")
     saving_mode: Optional[StrictStr] = Field(default=None, description="Toggle file saving mode for storage.  Is Files by default.", alias="savingMode")
-    format: StrictStr = Field(description="Input file format")
-    output_format: StrictStr = Field(description="output file format", alias="outputFormat")
-    worksheets: Optional[List[StrictInt]] = Field(default=None, description="List of Worksheets to translate by sequence number (1-based index). If not present, translate all worksheets")
-    ranges: Optional[Dict[str, WorksheetData]] = Field(default=None, description="Dictionary of ranges in Excel workbooks")
-    __properties: ClassVar[List[str]] = ["sourceLanguage", "targetLanguages", "originalFileName", "url", "origin", "savingMode", "format", "outputFormat", "worksheets", "ranges"]
+    ignore_list: Optional[List[StrictStr]] = Field(default=None, description="List of elements for Xml, Json and Yaml formats. Determines which items should be blacklisted or whitelisted for processing depending on GroupDocs.Translation.ApiGateway.DTO.XmlFileRequest.IsWhiteList.", alias="ignoreList")
+    is_white_list: Optional[StrictBool] = Field(default=None, description="Determines to which list the items in GroupDocs.Translation.ApiGateway.DTO.XmlFileRequest.IgnoreList should be allocated. The default is the black list.", alias="isWhiteList")
+    __properties: ClassVar[List[str]] = ["sourceLanguage", "targetLanguages", "originalFileName", "url", "origin", "savingMode", "ignoreList", "isWhiteList"]
 
     @field_validator('saving_mode')
     def saving_mode_validate_enum(cls, value):
@@ -49,20 +46,6 @@ class SpreadsheetFileRequest(BaseModel):
 
         if value not in set(['Files', 'Archive', 'Both']):
             raise ValueError("must be one of enum values ('Files', 'Archive', 'Both')")
-        return value
-
-    @field_validator('format')
-    def format_validate_enum(cls, value):
-        """Validates the enum"""
-        if value not in set(['Unknown', 'Xls', 'Xlsx', 'Xlsm', 'Ods']):
-            raise ValueError("must be one of enum values ('Unknown', 'Xls', 'Xlsx', 'Xlsm', 'Ods')")
-        return value
-
-    @field_validator('output_format')
-    def output_format_validate_enum(cls, value):
-        """Validates the enum"""
-        if value not in set(['Xls', 'Xlsx', 'Xlsm', 'Xlsb', 'Html', 'Pdf', 'Xps', 'Ods', 'Md', 'Docx', 'Pptx', 'Tiff']):
-            raise ValueError("must be one of enum values ('Xls', 'Xlsx', 'Xlsm', 'Xlsb', 'Html', 'Pdf', 'Xps', 'Ods', 'Md', 'Docx', 'Pptx', 'Tiff')")
         return value
 
     model_config = ConfigDict(
@@ -83,7 +66,7 @@ class SpreadsheetFileRequest(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of SpreadsheetFileRequest from a JSON string"""
+        """Create an instance of XmlFileRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -104,13 +87,6 @@ class SpreadsheetFileRequest(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each value in ranges (dict)
-        _field_dict = {}
-        if self.ranges:
-            for _key in self.ranges:
-                if self.ranges[_key]:
-                    _field_dict[_key] = self.ranges[_key].to_dict()
-            _dict['ranges'] = _field_dict
         # set to None if original_file_name (nullable) is None
         # and model_fields_set contains the field
         if self.original_file_name is None and "original_file_name" in self.model_fields_set:
@@ -126,21 +102,16 @@ class SpreadsheetFileRequest(BaseModel):
         if self.origin is None and "origin" in self.model_fields_set:
             _dict['origin'] = None
 
-        # set to None if worksheets (nullable) is None
+        # set to None if ignore_list (nullable) is None
         # and model_fields_set contains the field
-        if self.worksheets is None and "worksheets" in self.model_fields_set:
-            _dict['worksheets'] = None
-
-        # set to None if ranges (nullable) is None
-        # and model_fields_set contains the field
-        if self.ranges is None and "ranges" in self.model_fields_set:
-            _dict['ranges'] = None
+        if self.ignore_list is None and "ignore_list" in self.model_fields_set:
+            _dict['ignoreList'] = None
 
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of SpreadsheetFileRequest from a dict"""
+        """Create an instance of XmlFileRequest from a dict"""
         if obj is None:
             return None
 
@@ -154,15 +125,8 @@ class SpreadsheetFileRequest(BaseModel):
             "url": obj.get("url"),
             "origin": obj.get("origin"),
             "savingMode": obj.get("savingMode"),
-            "format": obj.get("format") if obj.get("format") is not None else 'Xlsx',
-            "outputFormat": obj.get("outputFormat"),
-            "worksheets": obj.get("worksheets"),
-            "ranges": dict(
-                (_k, WorksheetData.from_dict(_v))
-                for _k, _v in obj["ranges"].items()
-            )
-            if obj.get("ranges") is not None
-            else None
+            "ignoreList": obj.get("ignoreList"),
+            "isWhiteList": obj.get("isWhiteList")
         })
         return _obj
 

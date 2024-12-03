@@ -20,6 +20,8 @@ docs/ImageToFileRequest.md
 docs/ImageToTextRequest.md
 docs/LanguagePairData.md
 docs/MarkdownFileRequest.md
+docs/MediaToFileRequest.md
+docs/MediaToTextRequest.md
 docs/PdfFileRequest.md
 docs/PresentationFileRequest.md
 docs/SpreadsheetFileRequest.md
@@ -32,6 +34,7 @@ docs/TextRequest.md
 docs/TranslationApi.md
 docs/UrlFileInfo.md
 docs/WorksheetData.md
+docs/XmlFileRequest.md
 git_push.sh
 groupdocs_translation_cloud/__init__.py
 groupdocs_translation_cloud/api/__init__.py
@@ -59,6 +62,8 @@ groupdocs_translation_cloud/models/image_to_file_request.py
 groupdocs_translation_cloud/models/image_to_text_request.py
 groupdocs_translation_cloud/models/language_pair_data.py
 groupdocs_translation_cloud/models/markdown_file_request.py
+groupdocs_translation_cloud/models/media_to_file_request.py
+groupdocs_translation_cloud/models/media_to_text_request.py
 groupdocs_translation_cloud/models/pdf_file_request.py
 groupdocs_translation_cloud/models/presentation_file_request.py
 groupdocs_translation_cloud/models/spreadsheet_file_request.py
@@ -69,6 +74,8 @@ groupdocs_translation_cloud/models/text_document_file_request.py
 groupdocs_translation_cloud/models/text_request.py
 groupdocs_translation_cloud/models/url_file_info.py
 groupdocs_translation_cloud/models/worksheet_data.py
+groupdocs_translation_cloud/models/xml_file_request.py
+groupdocs_translation_cloud/py.typed
 groupdocs_translation_cloud/rest.py
 pyproject.toml
 requirements.txt
@@ -76,6 +83,4 @@ setup.cfg
 setup.py
 test-requirements.txt
 test/__init__.py
-test/test_health_check_entity.py
-test/test_translation_api.py
 tox.ini

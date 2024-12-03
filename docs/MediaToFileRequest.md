@@ -1,6 +1,5 @@
-# MarkdownFileRequest
+# MediaToFileRequest
 
-Request for markdown files or markdown files with Hugo syntax
 
 ## Properties
 
@@ -12,26 +11,28 @@ Name | Type | Description | Notes
 **url** | **str** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null | [optional] 
 **origin** | **str** | Url or name of application using this SDK. Not required. | [optional] 
 **saving_mode** | **str** | Toggle file saving mode for storage.  Is Files by default. | [optional] 
+**format** | **str** | Input file format | [default to 'Mp3']
 **output_format** | **str** | output file format | 
-**short_code_list** | **Dict[str, Optional[List[str]]]** | Dictionary of short code names and parameters names to translate | [optional] 
-**front_matter_list** | **List[List[str]]** | List of lists of frontmatter paths | [optional] 
+**fragments** | **List[str]** | Time fragments that require translation | [optional] 
+**interval** | **int** | Define intervals of timestampts in the resulting file | [optional] 
+**route** | **str** | endpoints route | [optional] 
 
 ## Example
 
 ```python
-from groupdocs_translation_cloud.models.markdown_file_request import MarkdownFileRequest
+from groupdocs_translation_cloud.models.media_to_file_request import MediaToFileRequest
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of MarkdownFileRequest from a JSON string
-markdown_file_request_instance = MarkdownFileRequest.from_json(json)
+# create an instance of MediaToFileRequest from a JSON string
+media_to_file_request_instance = MediaToFileRequest.from_json(json)
 # print the JSON string representation of the object
-print(MarkdownFileRequest.to_json())
+print(MediaToFileRequest.to_json())
 
 # convert the object into a dict
-markdown_file_request_dict = markdown_file_request_instance.to_dict()
-# create an instance of MarkdownFileRequest from a dict
-markdown_file_request_from_dict = MarkdownFileRequest.from_dict(markdown_file_request_dict)
+media_to_file_request_dict = media_to_file_request_instance.to_dict()
+# create an instance of MediaToFileRequest from a dict
+media_to_file_request_from_dict = MediaToFileRequest.from_dict(media_to_file_request_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
