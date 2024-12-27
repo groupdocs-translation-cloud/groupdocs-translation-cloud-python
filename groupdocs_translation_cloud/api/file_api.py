@@ -36,6 +36,8 @@ class FileApi:
         if api_client is None:
             api_client = ApiClient.get_default()
         self.api_client = api_client
+
+
     @validate_call
     def file_upload_post(
         self,

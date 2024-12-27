@@ -22,16 +22,13 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "groupdocs-translation-cloud"
-VERSION = "24.11.0"
+VERSION = "24.12.0"
 PYTHON_REQUIRES = ">=3.7"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 2.1.0",
     "python-dateutil",
     "pydantic >= 2",
     "typing-extensions >= 4.7.1",
-    "oauthlib ~= 3.2.2",
-    "requests-oauthlib ~= 2.0.0",
-    'urllib3 >= 2.2.3'
 ]
 
 setup(
