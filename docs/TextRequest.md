@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **texts** | **List[str]** | Text array to translate | [optional] 
 **origin** | **str** | For analysis only | [optional] 
 **contains_markdown** | **bool** | Set to true if you want to handle markdown in text | [optional] 
+**translation_dictionary** | **Dict[str, Optional[str]]** | Set a specific translation between source and target words. | [optional] 
 
 ## Example
 

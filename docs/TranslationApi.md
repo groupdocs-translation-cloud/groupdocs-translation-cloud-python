@@ -4,7 +4,9 @@ All URIs are relative to *https://api.groupdocs.cloud/v2.0/translation*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**auto_classification_post**](TranslationApi.md#auto_classification_post) | **POST** /auto/classification | Domain Ttanslation of any supported file based on classification
 [**auto_post**](TranslationApi.md#auto_post) | **POST** /auto | Translate any supported file
+[**auto_slang_post**](TranslationApi.md#auto_slang_post) | **POST** /auto/slang | Slang translation of any supported file
 [**csv_post**](TranslationApi.md#csv_post) | **POST** /csv | Translate CSV and TSV files
 [**document_post**](TranslationApi.md#document_post) | **POST** /document | Translate Microsoft Word documents, rtf, txt, odt
 [**document_request_id_get**](TranslationApi.md#document_request_id_get) | **GET** /document/{requestId} | Return document translation status.  Also return URLs for downloading of translated document if translation was successful
@@ -26,12 +28,93 @@ Method | HTTP request | Description
 [**resx_post**](TranslationApi.md#resx_post) | **POST** /resx | Translate Resx files
 [**spreadsheet_post**](TranslationApi.md#spreadsheet_post) | **POST** /spreadsheet | Translate Microsoft Excel workbooks, ods
 [**srt_post**](TranslationApi.md#srt_post) | **POST** /srt | Translate Srt files
+[**summarize_document_post**](TranslationApi.md#summarize_document_post) | **POST** /summarize-document | Summarize and translate document file
+[**summarize_image_post**](TranslationApi.md#summarize_image_post) | **POST** /summarize-image | Summarize and translate image or scanned pdf and return file
+[**summarize_media_post**](TranslationApi.md#summarize_media_post) | **POST** /summarize-media | Summarize audio or video, translate it  and return file as a result
+[**summarize_text_post**](TranslationApi.md#summarize_text_post) | **POST** /summarize-text | Summarize and translate text
+[**text_classification_post**](TranslationApi.md#text_classification_post) | **POST** /text/classification | Domain text translation based on classification
+[**text_medical_post**](TranslationApi.md#text_medical_post) | **POST** /text/medical | Translate medical
 [**text_post**](TranslationApi.md#text_post) | **POST** /text | Translate text
 [**text_request_id_get**](TranslationApi.md#text_request_id_get) | **GET** /text/{requestId} | Return text translation status.  Also return translated text if translation was successful
+[**text_slang_post**](TranslationApi.md#text_slang_post) | **POST** /text/slang | Translate slang
 [**text_trial_get**](TranslationApi.md#text_trial_get) | **GET** /text/trial | Return text translation status for trial requests.  Also return translated text if translation was successful
 [**text_trial_post**](TranslationApi.md#text_trial_post) | **POST** /text/trial | Trial translate text. Translate only 1000 symbols.
 [**xml_post**](TranslationApi.md#xml_post) | **POST** /xml | Translate XML files
 
+
+# **auto_classification_post**
+> StatusResponse auto_classification_post(file_request=file_request)
+
+Domain Ttanslation of any supported file based on classification
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.file_request import FileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    file_request = groupdocs_translation_cloud.FileRequest() # FileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Domain Ttanslation of any supported file based on classification
+        api_response = api_instance.auto_classification_post(file_request=file_request)
+        print("The response of TranslationApi->auto_classification_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->auto_classification_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_request** | [**FileRequest**](FileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **auto_post**
 > StatusResponse auto_post(file_request=file_request)
@@ -75,6 +158,80 @@ with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
         pprint(api_response)
     except Exception as e:
         print("Exception when calling TranslationApi->auto_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_request** | [**FileRequest**](FileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **auto_slang_post**
+> StatusResponse auto_slang_post(file_request=file_request)
+
+Slang translation of any supported file
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.file_request import FileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    file_request = groupdocs_translation_cloud.FileRequest() # FileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Slang translation of any supported file
+        api_response = api_instance.auto_slang_post(file_request=file_request)
+        print("The response of TranslationApi->auto_slang_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->auto_slang_post: %s\n" % e)
 ```
 
 
@@ -1652,6 +1809,450 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **summarize_document_post**
+> StatusResponse summarize_document_post(file_request=file_request)
+
+Summarize and translate document file
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.file_request import FileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    file_request = groupdocs_translation_cloud.FileRequest() # FileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Summarize and translate document file
+        api_response = api_instance.summarize_document_post(file_request=file_request)
+        print("The response of TranslationApi->summarize_document_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->summarize_document_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file_request** | [**FileRequest**](FileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **summarize_image_post**
+> StatusResponse summarize_image_post(image_to_file_request=image_to_file_request)
+
+Summarize and translate image or scanned pdf and return file
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.image_to_file_request import ImageToFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    image_to_file_request = groupdocs_translation_cloud.ImageToFileRequest() # ImageToFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Summarize and translate image or scanned pdf and return file
+        api_response = api_instance.summarize_image_post(image_to_file_request=image_to_file_request)
+        print("The response of TranslationApi->summarize_image_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->summarize_image_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **image_to_file_request** | [**ImageToFileRequest**](ImageToFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **summarize_media_post**
+> StatusResponse summarize_media_post(media_to_file_request=media_to_file_request)
+
+Summarize audio or video, translate it  and return file as a result
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.media_to_file_request import MediaToFileRequest
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    media_to_file_request = groupdocs_translation_cloud.MediaToFileRequest() # MediaToFileRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Summarize audio or video, translate it  and return file as a result
+        api_response = api_instance.summarize_media_post(media_to_file_request=media_to_file_request)
+        print("The response of TranslationApi->summarize_media_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->summarize_media_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **media_to_file_request** | [**MediaToFileRequest**](MediaToFileRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **summarize_text_post**
+> StatusResponse summarize_text_post(text_request=text_request)
+
+Summarize and translate text
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_request import TextRequest
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_request = groupdocs_translation_cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Summarize and translate text
+        api_response = api_instance.summarize_text_post(text_request=text_request)
+        print("The response of TranslationApi->summarize_text_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->summarize_text_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text_request** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **text_classification_post**
+> StatusResponse text_classification_post(text_request=text_request)
+
+Domain text translation based on classification
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_request import TextRequest
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_request = groupdocs_translation_cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Domain text translation based on classification
+        api_response = api_instance.text_classification_post(text_request=text_request)
+        print("The response of TranslationApi->text_classification_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->text_classification_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text_request** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **text_medical_post**
+> StatusResponse text_medical_post(text_request=text_request)
+
+Translate medical
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_request import TextRequest
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_request = groupdocs_translation_cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Translate medical
+        api_response = api_instance.text_medical_post(text_request=text_request)
+        print("The response of TranslationApi->text_medical_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->text_medical_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text_request** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **text_post**
 > StatusResponse text_post(text_request=text_request)
 
@@ -1797,6 +2398,80 @@ Name | Type | Description  | Notes
 |-------------|-------------|------------------|
 **200** | Success |  -  |
 **202** | Accepted |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **text_slang_post**
+> StatusResponse text_slang_post(text_request=text_request)
+
+Translate slang
+
+### Example
+
+* OAuth Authentication (JWT):
+
+```python
+import groupdocs_translation_cloud
+from groupdocs_translation_cloud.models.status_response import StatusResponse
+from groupdocs_translation_cloud.models.text_request import TextRequest
+from groupdocs_translation_cloud.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.groupdocs.cloud/v2.0/translation
+# See configuration.py for a list of all supported configuration parameters.
+configuration = groupdocs_translation_cloud.Configuration(
+    host = "https://api.groupdocs.cloud/v2.0/translation"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+configuration.access_token = os.environ["ACCESS_TOKEN"]
+
+# Enter a context with an instance of the API client
+with groupdocs_translation_cloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = groupdocs_translation_cloud.TranslationApi(api_client)
+    text_request = groupdocs_translation_cloud.TextRequest() # TextRequest | String in body of request, containing JSON with parameters for translation. (optional)
+
+    try:
+        # Translate slang
+        api_response = api_instance.text_slang_post(text_request=text_request)
+        print("The response of TranslationApi->text_slang_post:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling TranslationApi->text_slang_post: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text_request** | [**TextRequest**](TextRequest.md)| String in body of request, containing JSON with parameters for translation. | [optional] 
+
+### Return type
+
+[**StatusResponse**](StatusResponse.md)
+
+### Authorization
+
+[JWT](../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

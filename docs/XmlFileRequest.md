@@ -8,8 +8,10 @@ Name | Type | Description | Notes
 **source_language** | **str** | Language of original file | [default to 'en']
 **target_languages** | **List[str]** | List of target languages | 
 **original_file_name** | **str** | Type in the file name. If null will be as request ID. | [optional] 
-**url** | **str** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null | [optional] 
-**origin** | **str** | Url or name of application using this SDK. Not required. | [optional] 
+**url** | **str** | Link to file for translation. Ignore, if \&quot;file\&quot; property not null | 
+**origin** | **str** | Url or name of the application using this SDK. Not required. | [optional] 
+**is_need_alignment** | **bool** | Do result formating like the source. This option needs more expensive requests. | [optional] 
+**translation_dictionary** | **Dict[str, Optional[str]]** | Set a specific translation between source and target words. | [optional] 
 **saving_mode** | **str** | Toggle file saving mode for storage.  Is Files by default. | [optional] 
 **ignore_list** | **List[str]** | List of elements for Xml, Json and Yaml formats. Determines which items should be blacklisted or whitelisted for processing depending on GroupDocs.Translation.ApiGateway.DTO.XmlFileRequest.IsWhiteList. | [optional] 
 **is_white_list** | **bool** | Determines to which list the items in GroupDocs.Translation.ApiGateway.DTO.XmlFileRequest.IgnoreList should be allocated. The default is the black list. | [optional] 

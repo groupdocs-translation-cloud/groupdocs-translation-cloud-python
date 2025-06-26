@@ -9,10 +9,13 @@ Name | Type | Description | Notes
 **out_format** | **str** | output file format | [optional] 
 **request_id** | **str** | id of request | [optional] 
 **ids** | **List[int]** | Language pairs to translate | [optional] 
+**summarized** | **bool** | If summarization required | [optional] 
 **url** | **str** | Link to file for translation | [optional] 
 **size** | **int** | File size | [optional] 
 **masters** | **bool** | If translate master slides | [optional] 
 **formatting** | **bool** | If document&#39;s formatting should be preserved, default true | [optional] 
+**is_need_alignment** | **bool** | If need result like source formated text. | [optional] 
+**translation_dictionary** | **Dict[str, Optional[str]]** | Set a specific translation between source and target words. | [optional] 
 **origin** | **str** | for analysis only | [optional] 
 **elements** | **List[int]** | List of slides to translate | [optional] 
 **ranges** | [**Dict[str, WorksheetData]**](WorksheetData.md) | Dictionary of ranges in Excel workbooks | [optional] 
@@ -23,6 +26,7 @@ Name | Type | Description | Notes
 **is_paid** | **bool** | Set true if paid user | [optional] 
 **saving_mode** | **str** | Toggle files saving mode | [optional] 
 **details** | **Dict[str, Optional[str]]** | Details of the requests. Using for e2e tracking | [optional] 
+**model** | **str** | Text array to translate | [optional] 
 
 ## Example
 
